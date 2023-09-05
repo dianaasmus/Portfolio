@@ -1,0 +1,20 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    height: 100vh;
+
+    h1 {
+        font-weight: 500;
+    }
+
+    p {
+        width: 400px;
+    }
+
+    img {
+        height: 200px;
+        border-radius: 100%;
+    }
+}

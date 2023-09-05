@@ -1,0 +1,44 @@
+#home {
+    height: 100vh;
+
+    hr {
+        position: absolute;
+        height: 31vh;
+        bottom: 0px;
+        left: 90px;
+        background-color: #5338e4;
+        border: none;
+        width: 1px;
+        margin: 0;
+    }
+
+    p {
+        position: absolute;
+        left: 40px;
+        bottom: 150px;
+        color: #5338e4;
+        transform: rotate(-90deg);
+    }
+
+    .home-about {
+        position: absolute;
+        top: 60%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+        color: white;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 10px 0;
+        }
+    }
+}
