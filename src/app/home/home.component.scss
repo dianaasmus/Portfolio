@@ -1,11 +1,12 @@
 #home {
     height: 100vh;
+    position: relative;
 
     hr {
         position: absolute;
         height: 31vh;
         bottom: 0px;
-        left: 90px;
+        left: 20px;
         background-color: #5338e4;
         border: none;
         width: 1px;
@@ -14,10 +15,11 @@
 
     p {
         position: absolute;
-        left: 40px;
+        left: -30px;
         bottom: 150px;
         color: #5338e4;
         transform: rotate(-90deg);
+        margin-top: 0;
     }
 
     .home-about {
