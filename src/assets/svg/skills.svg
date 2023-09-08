@@ -1,0 +1,13 @@
+<svg id="Ebene_3" data-name="Ebene 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.5 689">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #5338e3;
+                stroke-miterlimit: 10;
+            }
+        </style>
+    </defs>
+    <path class="cls-1"
+        d="m5.72.5S-6.94,100.34,110.05,100.34h794.84s94.61-11,95.61,99.03c1,110.04-101.18,102.03-101.18,102.03l-796.23.13S.5,289.4.5,401.44s101.2,98.03,101.2,98.03l799.02.56s98.79-14.48,100.78,99.52" />
+</svg>

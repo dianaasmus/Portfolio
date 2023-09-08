@@ -2,7 +2,7 @@
     height: 100vh;
     position: relative;
 
-    svg {
+    .start-svg {
         position: absolute;
         bottom: 0;
         margin-left: 5px;
@@ -48,7 +48,7 @@
     height: 100vh;
     position: relative;
 
-    svg {
+    .about-me-svg {
         position: absolute;
         margin-left: 5px;
     }
@@ -65,34 +65,37 @@
         }
     }
 
-    img {
+    .personal-pic2 {
         height: 200px;
         border-radius: 100%;
     }
 }
 
 .skills-imgs {
-    height: 100vh;
-    svg {
-        position: relative;
+    height: 71vh;
+
+    .skills-svg {
+        position: absolute;
+        max-width: 1000px;
     }
 
-    // .grid {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    .grid::nth-child(-n+3) {
-        position: absolute;
-    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 50px;
+        grid-gap: 35px;
 
         div {
-            // text-align: center;
-            // align-self: center;
+            text-align: center;
+            align-self: center;
 
             img {
-                filter: brightness(0.5);
+                filter: brightness(1);
                 height: 70px;
                 width: 70px;
                 cursor: pointer;
+                background-color: #040303;
+                padding: 15px;
 
                 &:hover {
                     filter: brightness(1);
@@ -104,5 +107,29 @@
                 }
             }
         }
-    // }
+    }
+}
+
+.work-container {
+    height: 100vh;
+
+    .work-svg {
+        position: absolute;
+        max-width: 997px;
+    }
+
+    div {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .join-mobile {
+            height: 350px;
+        }
+        
+        .join-desktop {
+            height: 400px;
+        }
+    }
 }

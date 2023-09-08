@@ -17,4 +17,7 @@ export class HomepageComponent {
     { src: '../../assets/img/icons/typescript.png', alt: 'TypeScript' },
     { src: '../../assets/img/icons/firebase.png', alt: 'Firebase' }
   ];
+
+  icons = ['join', 'earth', 'da'];
+
 }

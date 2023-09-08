@@ -1,38 +1,16 @@
 <section id="home">
-    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" height="35%" width="100%">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: none;
-                    stroke: #5338e4;
-                    stroke-miterlimit: 10;
-                }
-            </style>
-        </defs>
-        <line class="cls-1" x1=".2" x2=".2" y2="100vh" />
-    </svg>
+    <img class="start-svg" src="../../assets/svg/start.svg" alt="start-svg" height="35%" width="100%">
 
     <p>view more</p>
 
     <div class="home-about">
-        <h1>Diana <br> Asmus</h1>
+        <h1>DIANA <br> ASMUS</h1>
         <h2>Front End Developer</h2>
     </div>
 </section>
 
 <section class="about-container">
-    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: none;
-                    stroke: #5338e4;
-                    stroke-miterlimit: 10;
-                }
-            </style>
-        </defs>
-        <line class="cls-1" x1=".2" x2=".2" y2="100vh" />
-    </svg>
+    <img class="about-me-svg" src="../../assets/svg/about-me.svg" alt="about-me-svg" height="100%" width="100%">
 
     <div>
         <h1>About Me</h1>
@@ -45,27 +23,25 @@
         </p>
     </div>
 
-    <img src="../../assets/img/name-icon.png" alt="">
+    <img class="personal-pic2" src="../../assets/img/name-icon.png" alt="personal-pic2">
 </section>
 
 <section class="skills-imgs">
-    <svg id="Ebene_3" data-name="Ebene 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.5 689">
-        <defs>
-            <style>
-                .cls-1 {
-                    fill: none;
-                    stroke: #5338e3;
-                    stroke-miterlimit: 10;
-                }
-            </style>
-        </defs>
-        <path class="cls-1"
-            d="m5.72.5S-6.94,100.34,110.05,100.34h794.84s94.61-11,95.61,99.03c1,110.04-101.18,102.03-101.18,102.03l-796.23.13S.5,289.4.5,401.44s101.2,98.03,101.2,98.03l799.02.56s98.79-14.48,100.78,99.52" />
-    </svg>
+    <img class="skills-svg" src="../../assets/svg/skills.svg" alt="skills-svg">
+
     <div class="grid">
         <div *ngFor="let icon of iconData">
             <img [src]="icon.src" [alt]="icon.alt" [style]="icon.style">
             <p>{{ icon.alt }}</p>
         </div>
+    </div>
+</section>
+
+<section class="work-container">
+    <img class="work-svg" src="../../assets/svg/work.svg" alt="work-svg">
+
+    <div *ngFor="let icon of icons">
+        <img class="join-mobile" [src]="'../../assets/img/' + icon + '-mobile.png'" [alt]="icon + '-mobile'">
+        <img class="join-desktop" [src]="'../../assets/img/' + icon + '-desktop.png'" [alt]="icon + '-desktop'">
     </div>
 </section>
