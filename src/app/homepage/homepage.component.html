@@ -1,0 +1,71 @@
+<section id="home">
+    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" height="35%" width="100%">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke: #5338e4;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <line class="cls-1" x1=".2" x2=".2" y2="100vh" />
+    </svg>
+
+    <p>view more</p>
+
+    <div class="home-about">
+        <h1>Diana <br> Asmus</h1>
+        <h2>Front End Developer</h2>
+    </div>
+</section>
+
+<section class="about-container">
+    <svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke: #5338e4;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <line class="cls-1" x1=".2" x2=".2" y2="100vh" />
+    </svg>
+
+    <div>
+        <h1>About Me</h1>
+
+        <p>Hello, I'm Diana, a passionate web developer with a penchant for creative and structured code. With
+            experience
+            in JavaScript, Angular, and HTML/CSS, I work to create great user experiences. When I'm not at my computer,
+            I
+            find inspiration in nature and sports.
+        </p>
+    </div>
+
+    <img src="../../assets/img/name-icon.png" alt="">
+</section>
+
+<section class="skills-imgs">
+    <svg id="Ebene_3" data-name="Ebene 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.5 689">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke: #5338e3;
+                    stroke-miterlimit: 10;
+                }
+            </style>
+        </defs>
+        <path class="cls-1"
+            d="m5.72.5S-6.94,100.34,110.05,100.34h794.84s94.61-11,95.61,99.03c1,110.04-101.18,102.03-101.18,102.03l-796.23.13S.5,289.4.5,401.44s101.2,98.03,101.2,98.03l799.02.56s98.79-14.48,100.78,99.52" />
+    </svg>
+    <div class="grid">
+        <div *ngFor="let icon of iconData">
+            <img [src]="icon.src" [alt]="icon.alt" [style]="icon.style">
+            <p>{{ icon.alt }}</p>
+        </div>
+    </div>
+</section>

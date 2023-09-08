@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
+  styleUrls: ['./homepage.component.scss']
 })
-export class SkillsComponent {
+export class HomepageComponent {
   iconData = [
     { src: '../../assets/img/icons/html_css.png', alt: 'HTML/CSS' },
     { src: '../../assets/img/icons/javaScript.png', alt: 'JavaScript' },

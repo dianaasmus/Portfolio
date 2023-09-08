@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./work.component.scss']
 })
 export class WorkComponent {
-
+  icons = ['join', 'earth', 'da'];
 }
