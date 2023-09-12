@@ -1,0 +1,23 @@
+.portfolio-container {
+    height: 100vh;
+
+    .portfolio-svg {
+        position: absolute;
+        max-width: 997px;
+    }
+
+    div {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .join-mobile {
+            height: 350px;
+        }
+        
+        .join-desktop {
+            height: 400px;
+        }
+    }
+}

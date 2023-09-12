@@ -1,0 +1,8 @@
+<section class="skills-imgs">
+    <div class="grid">
+        <div *ngFor="let icon of iconData">
+            <img [src]="icon.src" [alt]="icon.alt">
+            <p>{{ icon.alt }}</p>
+        </div>
+    </div>
+</section>

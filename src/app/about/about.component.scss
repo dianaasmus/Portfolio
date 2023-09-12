@@ -1,0 +1,30 @@
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 100vh;
+    position: relative;
+
+    .about-me-svg {
+        position: absolute;
+        margin-left: 5px;
+    }
+
+    div {
+        padding-left: 50px;
+
+        h1 {
+            font-weight: 500;
+        }
+
+        p {
+            width: 500px;
+        }
+    }
+
+    .personal-pic2 {
+        height: 200px;
+        border-radius: 100%;
+    }
+}
