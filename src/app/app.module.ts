@@ -8,7 +8,7 @@ import { StartscreenComponent } from './startscreen/startscreen.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PathComponent } from './path/path.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { PathComponent } from './path/path.component';
     AboutComponent,
     SkillsComponent,
     PortfolioComponent,
-    PathComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,

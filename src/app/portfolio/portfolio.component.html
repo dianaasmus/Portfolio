@@ -1,5 +1,24 @@
 <section class="portfolio-container">
-    <div *ngFor="let icon of icons">
+    <div class="portfolio-headline">
+        <h1>Portfolio</h1>
+        <div class="headline-btns">
+            <button>JavaScript</button>
+            <button>Angular</button>
+        </div>
+    </div>
+    <div class="project" *ngFor="let icon of icons">
+        <div class="project-context">
+            <h1>Join</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia numquam odio perferendis modi
+                quaerat
+                reiciendis quo optio illum delectus commodi laboriosam assumenda, maxime doloremque molestiae? Quam
+                magni
+                odio libero?</p>
+            <div class="project-context-btns">
+                <button>try</button>
+                <button>github</button>
+            </div>
+        </div>
         <img class="join-mobile" [src]="'../../assets/img/' + icon + '-mobile.png'" [alt]="icon + '-mobile'">
         <img class="join-desktop" [src]="'../../assets/img/' + icon + '-desktop.png'" [alt]="icon + '-desktop'">
     </div>

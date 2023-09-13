@@ -1,23 +1,66 @@
 .portfolio-container {
     height: 100vh;
+    margin-top: 150px;
+}
 
-    .portfolio-svg {
-        position: absolute;
-        max-width: 997px;
+
+.portfolio-headline {
+    color: white;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headline-btns {
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    all: unset;
+    display: flex;
+    border: 1px solid #5338e4;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-context {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: baseline;
+
+    h1 {
+        font-size: 2rem;
+        text-align: start;
+    }
+}
+
+.project-context-btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 22vw;
+}
+
+.project {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .join-mobile {
+        height: 250px;
+        transform: translateX(90px) translateY(50px);
     }
 
-    div {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-        .join-mobile {
-            height: 350px;
-        }
-        
-        .join-desktop {
-            height: 400px;
-        }
+    .join-desktop {
+        height: 350px;
     }
 }

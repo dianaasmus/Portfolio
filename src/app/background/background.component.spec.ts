@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PathComponent } from './path.component';
+import { PathComponent } from './background.component';
 
 describe('PathComponent', () => {
   let component: PathComponent;
