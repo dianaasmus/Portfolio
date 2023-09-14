@@ -2,10 +2,20 @@
     height: 100vh;
     position: relative;
 
+    hr {
+        height: 22vh;
+        width: 1px;
+        background-color: #5338e4;
+        border: none;
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+    }
+
     p {
         position: absolute;
-        left: -20px;
-        bottom: 165px;
+        right: -20px;
+        bottom: 10vh;
         color: #5338e4;
         transform: rotate(-90deg);
         margin-top: 0;
@@ -13,8 +23,8 @@
 
     .home-about {
         position: absolute;
-        top: 60%;
-        left: 38%;
+        top: 55%;
+        left: 30%;
         transform: translate(-50%, -50%);
         color: white;
 
@@ -32,4 +42,6 @@
             margin: 10px 0;
         }
     }
+
+
 }
