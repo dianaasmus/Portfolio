@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  icons = ['join', 'join', 'join'];
+  icons = ['join', 'escaping-earth', 'join'];
 
 }

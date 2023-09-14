@@ -18,8 +18,11 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        padding: 10vh 100px;
-        height: 80vh;
+        padding: 10vh 0;
+        height: 580px;
+        position: absolute;
+        width: 100%;
+        max-width: 1000px;
 
         div {
             text-align: center;
