@@ -54,20 +54,24 @@ button {
     align-items: center;
     justify-content: center;
     gap: 35px;
+
+    &:nth-child(3) {
+        flex-direction: row-reverse;
+    }
 }
 
 .join-mobile {
     position: absolute;
-    height: 250px;
-    transform: translateX(-80px) translateY(50px);
+    height: 230px;
+    transform: translateX(-50px) translateY(50px);
 }
 
 .join-mobile[alt="escaping-earth-mobile"] {
     width: 250px;
     height: 130px;
-    transform: translateX(-65px) translateY(112px);
+    transform: translateX(-40px) translateY(100px);
 }
 
 .join-desktop {
-    height: 350px;
+    height: 330px;
 }
