@@ -1,14 +1,15 @@
-<section class="portfolio-container">
+<section class="portfolio-container" id="work">
     <div class="portfolio-headline">
         <h1>Portfolio</h1>
         <div class="headline-btns">
-            <button>JavaScript</button>
-            <button>Angular</button>
+            <button (click)="resetFilter()">All</button>
+            <button (click)="filterByCode('JavaScript')">JavaScript</button>
+            <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
-    <div class="project" *ngFor="let icon of icons">
+    <div class="project" *ngFor="let project of filteredProjects">
         <div class="project-context">
-            <h1>Join</h1>
+            <h1>{{ project.name }}</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia numquam odio perferendis modi
                 quaerat
                 reiciendis quo optio illum delectus commodi laboriosam assumenda, maxime doloremque molestiae? Quam
@@ -19,7 +20,7 @@
                 <button>github</button>
             </div>
         </div>
-        <img class="join-mobile" [src]="'../../assets/img/' + icon + '-mobile.png'" [alt]="icon + '-mobile'">
-        <img class="join-desktop" [src]="'../../assets/img/' + icon + '-desktop.png'" [alt]="icon + '-desktop'">
+        <img class="join-mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'" [alt]="project.imgs + '-mobile'">
+        <img class="join-desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'" [alt]="project.imgs + '-desktop'">
     </div>
 </section>

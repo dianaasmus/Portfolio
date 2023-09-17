@@ -6,6 +6,37 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  icons = ['join', 'escaping-earth', 'join'];
+  projects = [
+    {
+      name: 'Join',
+      imgs: 'join',
+      code: 'JavaScript',
+      website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
+      github: 'https://github.com/dianaasmus/Join-new.git'
+    },
+    {
+      name: 'Escaping Earth',
+      imgs: 'escaping-earth',
+      code: 'JavaScript',
+      website: 'https://diana-asmus.developerakademie.net/Escaping%20Earth/index.html',
+      github: 'https://github.com/dianaasmus/Join-new.git'
+    },
+    {
+      name: 'Join',
+      imgs: 'join',
+      code: 'Angular',
+      website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
+      github: 'https://github.com/dianaasmus/Join-new.git'
+    }
+  ];
 
+  filteredProjects = this.projects.slice(); // Kopie des ursprünglichen Arrays
+
+  filterByCode(code: string) {
+    this.filteredProjects = this.projects.filter(project => project.code === code);
+  }
+
+  resetFilter() {
+    this.filteredProjects = this.projects.slice();
+  }
 }
