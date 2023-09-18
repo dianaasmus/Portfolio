@@ -10,30 +10,35 @@ export class PortfolioComponent {
     {
       name: 'Join',
       imgs: 'join',
-      code: 'JavaScript',
+      filter: 'JavaScript',
       website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
-      github: 'https://github.com/dianaasmus/Join-new.git'
+      github: 'https://github.com/dianaasmus/Join-new.git',
+      content: 'Join is a powerful Kanban project management tool that helps teams efficiently organize and manage their projects. With a user-friendly interface and a variety of features, Join provides an intuitive platform for collaboration and task progress.',
+      code: 'HTML | CSS | JavaScript'
     },
     {
       name: 'Escaping Earth',
       imgs: 'escaping-earth',
-      code: 'JavaScript',
+      filter: 'JavaScript',
       website: 'https://diana-asmus.developerakademie.net/Escaping%20Earth/index.html',
-      github: 'https://github.com/dianaasmus/Escaping-Earth.git'
+      github: 'https://github.com/dianaasmus/Escaping-Earth.git',
+      content: 'In Escaping Earth, you control a character as they explore a world full of challenges and obstacles. A dynamic and interactive game that is easy for players of all ages to enjoy. Get ready to jump, run, and conquer levels in this thrilling adventure!',
+      code: 'HTML | CSS | JavaScript OOP'
     },
-    {
-      name: 'DA-Bubble',
-      imgs: 'da-bubble',
-      code: 'Angular',
-      website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
-      github: 'https://github.com/dianaasmus/Join-new.git'
-    }
+    // {
+    //   name: 'DA-Bubble',
+    //   imgs: 'da-bubble',
+    //   code: 'Angular',
+    //   website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
+    //   github: 'https://github.com/dianaasmus/Join-new.git',
+    //   content: ''
+    // }
   ];
 
-  filteredProjects = this.projects.slice(); // Kopie des ursprünglichen Arrays
+  filteredProjects = this.projects.slice();
 
-  filterByCode(code: string) {
-    this.filteredProjects = this.projects.filter(project => project.code === code);
+  filterByCode(filter: string) {
+    this.filteredProjects = this.projects.filter(project => project.filter === filter);
   }
 
   resetFilter() {

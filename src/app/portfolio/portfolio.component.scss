@@ -18,7 +18,7 @@
     gap: 30px;
 }
 
-button {
+a, button {
     all: unset;
     display: flex;
     border: 1px solid #5338e4;
@@ -43,6 +43,7 @@ button {
     color: white;
     align-items: baseline;
     height: 50vh;
+    animation: fadeInText 1s ease-in-out forwards;
 
     h1 {
         font-size: 2rem;
@@ -50,9 +51,22 @@ button {
     }
 }
 
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-2222px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .project-context-btns {
     display: flex;
-    justify-content: space-evenly;
+    gap: 50px;
+    margin-top: 30px;
     width: 22vw;
 }
 
@@ -82,18 +96,73 @@ button {
     }
 }
 
+@keyframes fadeInDesktop {
+    from {
+        opacity: 0;
+        transform: translateX(-2022px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDesktopOdd {
+    from {
+        opacity: 0;
+        transform: translateX(2022px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInMobile {
+    from {
+        opacity: 0;
+        transform: translateX(-2222px);
+    }
+
+    to {
+        opacity: 1;
+        z-index: 1;
+        transform: translateX(-50px) translateY(50px);
+    }
+}
+
+@keyframes fadeInMobileOdd {
+    from {
+        opacity: 0;
+        transform: translateX(2022px);
+    }
+
+    to {
+        opacity: 1;
+        z-index: 1;
+        transform: translateX(-40px) translateY(100px);
+    }
+}
+
 .join-mobile {
     position: absolute;
     height: 230px;
-    transform: translateX(-50px) translateY(50px);
+    animation: fadeInMobile 1s ease-in-out forwards;
 }
 
 .join-mobile[alt="escaping-earth-mobile"] {
     width: 250px;
     height: 130px;
-    transform: translateX(-40px) translateY(100px);
+    animation: fadeInMobileOdd 1s ease-in-out forwards;
 }
 
 .join-desktop {
     height: 330px;
+    animation: fadeInDesktop 1s ease-in-out forwards;
+}
+
+.join-desktop[alt="escaping-earth-desktop"] {
+    animation: fadeInDesktopOdd 1s ease-in-out forwards;
 }

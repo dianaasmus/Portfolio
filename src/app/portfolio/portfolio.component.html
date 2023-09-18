@@ -10,14 +10,10 @@
     <div class="project" *ngFor="let project of filteredProjects">
         <div class="project-context">
             <h1>{{ project.name }}</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quia numquam odio perferendis modi
-                quaerat
-                reiciendis quo optio illum delectus commodi laboriosam assumenda, maxime doloremque molestiae? Quam
-                magni
-                odio libero?</p>
+            <p>{{ project.content }}</p>
             <div class="project-context-btns">
-                <button>try</button>
-                <button>github</button>
+                <a href="{{ project.website }}" target="_blank">try</a>
+                <a href="{{ project.github }}" target="_blank">github</a>
             </div>
         </div>
         <img class="join-mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'" [alt]="project.imgs + '-mobile'">

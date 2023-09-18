@@ -1,5 +1,5 @@
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -10,8 +10,9 @@ header {
     margin: 0 auto;
     max-width: 1000px;
     z-index: 2;
+    background-color: rgba(0, 0, 0, 0.9);
 
-    img {
+    .header-img {
         height: 40px;
         cursor: pointer;
     }
