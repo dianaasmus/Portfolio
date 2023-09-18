@@ -1,0 +1,26 @@
+footer {
+    height: 13rem;
+    background-color: rgba(83, 56, 228, 0.05);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: #5338e4;
+                transition: all 125ms ease-in-out;
+            }
+        }
+    }
+}
