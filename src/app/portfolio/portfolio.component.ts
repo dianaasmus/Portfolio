@@ -19,11 +19,11 @@ export class PortfolioComponent {
       imgs: 'escaping-earth',
       code: 'JavaScript',
       website: 'https://diana-asmus.developerakademie.net/Escaping%20Earth/index.html',
-      github: 'https://github.com/dianaasmus/Join-new.git'
+      github: 'https://github.com/dianaasmus/Escaping-Earth.git'
     },
     {
-      name: 'Join',
-      imgs: 'join',
+      name: 'DA-Bubble',
+      imgs: 'da-bubble',
       code: 'Angular',
       website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
       github: 'https://github.com/dianaasmus/Join-new.git'
