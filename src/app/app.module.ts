@@ -8,7 +8,6 @@ import { StartscreenComponent } from './startscreen/startscreen.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { BackgroundComponent } from './background/background.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -20,7 +19,6 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     SkillsComponent,
     PortfolioComponent,
-    BackgroundComponent,
     ContactMeComponent,
     FooterComponent
   ],

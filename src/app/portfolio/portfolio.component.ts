@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+
   projects = [
     {
       name: 'Join',
@@ -44,4 +45,5 @@ export class PortfolioComponent {
   resetFilter() {
     this.filteredProjects = this.projects.slice();
   }
+
 }

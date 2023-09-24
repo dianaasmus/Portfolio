@@ -1,49 +1,76 @@
 #home {
     height: 100vh;
     position: relative;
+    width: 100%;
+    max-width: 1000px;
+
+    .contact-icons {
+        display: flex;
+        gap: 15px;
+        position: absolute;
+        bottom: 38px;
+        left: 15px;
+        flex-direction: column;
+
+        img {
+            width: 22px;
+            filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
+            cursor: pointer;
+
+            &:hover {
+                filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(21%) contrast(87%);
+                transition: all ease-in-out 125ms;
+            }
+        }
+    }
 
     hr {
-        height: 15vh;
-        width: 1px;
-        background-color: #5338e4;
+        height: 6vh;
+        width: 0.5px;
+        background-color: #dddddd;
         border: none;
         position: absolute;
-        bottom: -10px;
-        right: 0;
+        bottom: 38px;
+        right: 17px;
     }
 
     p {
         position: absolute;
-        right: -20px;
-        bottom: 5vh;
-        color: #5338e4;
-        transform: rotate(-90deg);
+        right: 0;
+        bottom: 15vh;
+        color: #dddddd;
+        transform: rotate(90deg);
         margin-top: 0;
     }
 
     .home-about {
         position: absolute;
         top: 55%;
-        left: 30%;
+        left: 50%;
+        white-space: nowrap;
         transform: translate(-50%, -50%);
         color: white;
 
         h1 {
-            font-size: 6rem;
-            font-weight: 300;
+            font-size: 5rem;
             letter-spacing: 5px;
             margin: 0;
+            font-family: 'Mooli', sans-serif;
+            font-weight: 300;
+            color: #dddddd;
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 300;
+            font-weight: 100;
             letter-spacing: 1px;
             margin: 10px 0;
-            color: rgb(83, 56, 228);
+            color: grey;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
 
+        .align-end {
+            text-align: end;
         }
     }
-
-
 }
