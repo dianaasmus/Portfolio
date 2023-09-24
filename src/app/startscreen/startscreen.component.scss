@@ -4,26 +4,6 @@
     width: 100%;
     max-width: 1000px;
 
-    .contact-icons {
-        display: flex;
-        gap: 15px;
-        position: absolute;
-        bottom: 38px;
-        left: 15px;
-        flex-direction: column;
-
-        img {
-            width: 22px;
-            filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
-            cursor: pointer;
-
-            &:hover {
-                filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(21%) contrast(87%);
-                transition: all ease-in-out 125ms;
-            }
-        }
-    }
-
     hr {
         height: 6vh;
         width: 0.5px;
@@ -43,34 +23,58 @@
         margin-top: 0;
     }
 
-    .home-about {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        white-space: nowrap;
-        transform: translate(-50%, -50%);
-        color: white;
+}
 
-        h1 {
-            font-size: 5rem;
-            letter-spacing: 5px;
-            margin: 0;
-            font-family: 'Mooli', sans-serif;
-            font-weight: 300;
-            color: #dddddd;
-        }
+.contact-icons {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: 38px;
+    left: 15px;
+    flex-direction: column;
 
-        h2 {
-            font-weight: 100;
-            letter-spacing: 1px;
-            margin: 10px 0;
-            color: grey;
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
+    img {
+        width: 22px;
+        filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
+        cursor: pointer;
 
-        .align-end {
-            text-align: end;
+        &:hover {
+            filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(21%) contrast(87%);
+            transition: all ease-in-out 125ms;
         }
+    }
+}
+
+.scroll {
+    height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    position: fixed;
+}
+
+.home-about {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    color: white;
+
+    h1 {
+        font-size: 5rem;
+        letter-spacing: 5px;
+        margin: 0;
+        font-family: 'Mooli', sans-serif;
+        font-weight: 300;
+        color: #dddddd;
+    }
+
+    h2 {
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 10px 0;
+        color: grey;
+        font-size: 1rem;
+        text-transform: uppercase;
     }
 }
