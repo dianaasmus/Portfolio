@@ -15,7 +15,7 @@ export class PortfolioComponent {
       website: 'https://diana-asmus.developerakademie.net/Join/html/index.html',
       github: 'https://github.com/dianaasmus/Join-new.git',
       content: 'Join is a powerful Kanban project management tool that helps teams efficiently organize and manage their projects. With a user-friendly interface and a variety of features, Join provides an intuitive platform for collaboration and task progress.',
-      code: 'HTML | CSS | JavaScript'
+      code: 'HTML | CSS | JavaScript | Group project'
     },
     {
       name: 'Escaping Earth',
@@ -37,6 +37,8 @@ export class PortfolioComponent {
   ];
 
   filteredProjects = this.projects.slice();
+
+  addContext: boolean = false;
 
   filterByCode(filter: string) {
     this.filteredProjects = this.projects.filter(project => project.filter === filter);

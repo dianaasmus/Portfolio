@@ -10,7 +10,7 @@
         transform: translate(-50%);
         font-size: 2.5rem;
         font-weight: 300;
-        margin-top: 12vh;
+        margin-top: 124px;
     }
 
     svg {
@@ -31,12 +31,12 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding-top: 25vh;
-        height: 65vh;
+        height: 60vh;
         position: absolute;
         width: 80%;
         max-width: 1000px;
         width: auto;
-        column-gap: 10vw;
+        column-gap: 12vw;
 
         div {
             display: flex;

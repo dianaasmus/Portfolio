@@ -7,16 +7,23 @@
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
+
     <div class="project" *ngFor="let project of filteredProjects">
-        <div class="project-context">
+        <div class="project-context" (mouseover)="addContext=true" (mouseout)="addContext=false" [class.show-context]="addContext">
             <h1>{{ project.name }}</h1>
+            <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
             <div class="project-context-btns">
                 <a href="{{ project.website }}" target="_blank">try</a>
                 <a href="{{ project.github }}" target="_blank">github</a>
             </div>
         </div>
-        <img class="join-mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'" [alt]="project.imgs + '-mobile'">
-        <img class="join-desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'" [alt]="project.imgs + '-desktop'">
+
+        <div class="project-mockups" [class.mockup-hover]="addContext">
+            <img class="join-mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'"
+                [alt]="project.imgs + '-mobile'">
+            <img class="join-desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'"
+                [alt]="project.imgs + '-desktop'">
+        </div>
     </div>
 </section>

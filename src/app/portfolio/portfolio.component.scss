@@ -1,6 +1,9 @@
 .portfolio-container {
-    // height: 100vh;
-    margin-top: 150px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    padding: 0 115px;
+    z-index: 3;
 }
 
 .portfolio-headline {
@@ -18,7 +21,8 @@
     gap: 30px;
 }
 
-a, button {
+a,
+button {
     all: unset;
     display: flex;
     border: 1px solid #5338e4;
@@ -31,25 +35,52 @@ a, button {
 
     &:hover {
         background-color: #5338e4;
-        border: 1px solid #040303;
+        border: 1px solid #5338e4;
         color: white;
         transition: all 125ms ease-in-out;
     }
 }
 
+.show-context {
+    opacity: 1 !important;
+    transition: all ease-in-out 225ms;
+}
+
 .project-context {
+    position: absolute;
     display: flex;
     flex-direction: column;
     color: white;
-    align-items: baseline;
+    align-items: center;
     height: 50vh;
+    z-index: 3;
+    width: 50%;
+    opacity: 0;
+    cursor: pointer;
     // animation: fadeInText 1s ease-in-out forwards;
 
     h1 {
         font-size: 2rem;
         text-align: start;
     }
+
+    p {
+        text-align: center;
+    }
 }
+
+.project-code {
+    color: #5338e4;
+    margin: 0;
+}
+
+.mockup-hover {
+    cursor: pointer;
+    opacity: 0.05;
+    cursor: pointer;
+    transition: all ease-in-out 225ms;
+}
+
 
 @keyframes fadeInText {
     from {
@@ -77,23 +108,23 @@ a, button {
     justify-content: center;
     gap: 35px;
 
-    &:nth-child(2) {
-        border-bottom: 1px solid #5338e4;
-        border-bottom-right-radius: 15vw;
-    }
+    // &:nth-child(2) {
+    //     // border-bottom: 1px solid #5338e4;
+    //     border-bottom-right-radius: 15vw;
+    // }
 
-    &:nth-child(3) {
-        flex-direction: row-reverse;
-        border-top: 1px solid #5338e4;
-        border-top-left-radius: 15vw;
-        border-bottom: 1px solid #5338e4;
-        border-bottom-right-radius: 15vw;
-    }
+    // &:nth-child(3) {
+    //     flex-direction: row-reverse;
+    //     // border-top: 1px solid #5338e4;
+    //     border-top-left-radius: 15vw;
+    //     border-bottom: 1px solid #5338e4;
+    //     border-bottom-right-radius: 15vw;
+    // }
 
-    &:nth-child(4) {
-        border-top: 1px solid #5338e4;
-        border-top-left-radius: 15vw;
-    }
+    // &:nth-child(4) {
+    //     border-top: 1px solid #5338e4;
+    //     border-top-left-radius: 15vw;
+    // }
 }
 
 @keyframes fadeInDesktop {
@@ -104,49 +135,49 @@ a, button {
 
     to {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(50px);
     }
 }
 
-// @keyframes fadeInDesktopOdd {
-//     from {
-//         opacity: 0;
-//         transform: translateX(2022px);
-//     }
+@keyframes fadeInDesktopOdd {
+    from {
+        opacity: 0;
+        transform: translateX(2022px) translateY(0px);
+    }
 
-//     to {
-//         opacity: 1;
-//         transform: translateX(0);
-//     }
-// }
-
-// @keyframes fadeInMobile {
-//     from {
-//         opacity: 0;
-//         transform: translateX(-2222px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateX(-50px) translateY(50px);
-//     }
-// }
-
-// @keyframes fadeInMobileOdd {
-//     from {
-//         opacity: 0;
-//         transform: translateX(2022px);
-//     }
-
-//     to {
-//         opacity: 1;
-//         transform: translateX(-40px) translateY(100px);
-//     }
-// }
-
-.scroll-animation {
-    animation: fadeInDesktop 1s ease-in-out forwards;
+    to {
+        opacity: 1;
+        transform: translateX(-45px) translateY(0px);
+    }
 }
+
+@keyframes fadeInMobile {
+    from {
+        opacity: 0;
+        transform: translateX(-2222px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(5px) translateY(100px);
+    }
+}
+
+@keyframes fadeInMobileOdd {
+    from {
+        opacity: 0;
+        transform: translateX(2022px) translateY(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(320px) translateY(200px);
+    }
+}
+
+// .scroll-animation {
+//     animation: fadeInDesktop 1s ease-in-out forwards;
+// }
 
 .join-mobile {
     position: absolute;
@@ -164,6 +195,8 @@ a, button {
 
 .join-desktop {
     height: 330px;
+    animation: fadeInDesktop 1s ease-in-out forwards;
+
 }
 
 .join-desktop[alt="escaping-earth-desktop"] {
