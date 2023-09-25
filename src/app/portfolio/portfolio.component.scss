@@ -21,24 +21,9 @@
     gap: 30px;
 }
 
-a,
-button {
-    all: unset;
-    display: flex;
-    border: 1px solid #5338e4;
-    border-radius: 10px;
-    width: 100px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #5338e4;
-        border: 1px solid #5338e4;
-        color: white;
-        transition: all 125ms ease-in-out;
-    }
+a {
+    color: #ddd;
+    text-decoration: none;
 }
 
 .show-context {
@@ -57,7 +42,6 @@ button {
     width: 50%;
     opacity: 0;
     cursor: pointer;
-    // animation: fadeInText 1s ease-in-out forwards;
 
     h1 {
         font-size: 2rem;
@@ -174,10 +158,6 @@ button {
         transform: translateX(320px) translateY(200px);
     }
 }
-
-// .scroll-animation {
-//     animation: fadeInDesktop 1s ease-in-out forwards;
-// }
 
 .join-mobile {
     position: absolute;

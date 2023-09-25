@@ -1,4 +1,4 @@
-<section class="portfolio-container" id="work">
+<section class="portfolio-container" id="portfolio">
     <div class="portfolio-headline">
         <h1>Portfolio</h1>
         <div class="headline-btns">
@@ -9,13 +9,18 @@
     </div>
 
     <div class="project" *ngFor="let project of filteredProjects">
-        <div class="project-context" (mouseover)="addContext=true" (mouseout)="addContext=false" [class.show-context]="addContext">
+        <div class="project-context" (mouseover)="addContext=true" (mouseout)="addContext=false"
+            [class.show-context]="addContext">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
             <div class="project-context-btns">
-                <a href="{{ project.website }}" target="_blank">try</a>
-                <a href="{{ project.github }}" target="_blank">github</a>
+                <button>
+                    <a href="{{ project.website }}" target="_blank">Try</a>
+                </button>
+                <button>
+                    <a href="{{ project.github }}" target="_blank">Github</a>
+                </button>
             </div>
         </div>
 

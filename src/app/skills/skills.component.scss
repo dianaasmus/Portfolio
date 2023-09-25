@@ -36,7 +36,7 @@
         width: 80%;
         max-width: 1000px;
         width: auto;
-        column-gap: 12vw;
+        column-gap: 135px;
 
         div {
             display: flex;
@@ -45,20 +45,21 @@
             flex-direction: column;
 
             img {
-                filter: brightness(1);
                 height: 55px;
                 width: 55px;
                 cursor: pointer;
                 padding: 10px;
+                opacity: 0.5;
 
                 &:hover {
                     // filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
                     transition: all ease-in-out 150ms;
-                    box-shadow: 0px 0px 8px #5338e4;
+                    // box-shadow: 0px 0px 8px #5338e4;
+                    opacity: 1 ;
                 }
 
                 &:hover+p {
-                    color: #5338e4;
+                    color: #ddd;
                     transform: translateY(-10px);
                     transition: all ease-in-out 150ms;
                     // box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.81);

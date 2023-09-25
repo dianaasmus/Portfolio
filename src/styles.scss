@@ -9,3 +9,25 @@ body {
     margin: 0;
     color: #dddddd;
 }
+
+button {
+    all: unset;
+    display: flex;
+    width: 100%;
+    min-width: 100px;
+    height: 40px;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+    box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
+    transition: all ease-in-out 225ms;
+
+    &:hover {
+        border: 1px solid #5338e4;
+        color: white;
+        transition: all 225ms ease-in-out;
+        background-color: #131313;
+    }
+}
