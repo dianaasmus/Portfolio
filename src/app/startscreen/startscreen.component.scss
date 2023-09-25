@@ -39,7 +39,7 @@
         cursor: pointer;
 
         &:hover {
-            filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(21%) contrast(87%);
+            filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
             transition: all ease-in-out 125ms;
         }
     }
@@ -77,4 +77,8 @@
         font-size: 1rem;
         text-transform: uppercase;
     }
+}
+
+.align-end {
+    text-align: end;
 }
