@@ -11,7 +11,7 @@
         border: none;
         position: absolute;
         bottom: 38px;
-        right: 17px;
+        right: 19px;
     }
 
     p {
@@ -23,6 +23,24 @@
         margin-top: 0;
     }
 
+}
+
+.arrow-up {
+    filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
+    position: absolute;
+    right: 3px;
+    bottom: 2rem;
+    cursor: pointer;
+    display: block;
+    transition: all ease-in-out 125ms;
+
+    &:hover {
+        filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
+    }
+}
+
+.d-none {
+    display: none;
 }
 
 .contact-icons {
@@ -37,10 +55,10 @@
         width: 22px;
         filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
         cursor: pointer;
+        transition: all ease-in-out 125ms;
 
         &:hover {
             filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
-            transition: all ease-in-out 125ms;
         }
     }
 }

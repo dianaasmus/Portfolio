@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-startscreen',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./startscreen.component.scss']
 })
 export class StartscreenComponent {
+  @Input() showArrow: boolean = false;
 
 }

@@ -1,4 +1,4 @@
-<form class="contact-container" id="contactMe">
+<form class="contact-container" id="contactMe" #elementToObserve>
     <div class="form-headline">
         <h1>Let's talk business</h1>
         <p>Now that you know a lot about me, let me know if you are interested to work with me.</p>
@@ -7,15 +7,15 @@
     <div class="form-content">
         <h1>Contact Form</h1>
 
-        <label for="">Name</label>
-        <input type="text" name="" id="">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="on">
 
-        <label for="">Email address</label>
-        <input type="text">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" autocomplete="on">
 
-        <label for="">Message</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" cols="30" rows="10"></textarea>
 
-        <button>Send Message</button>
+        <button type="submit">Send Message</button>
     </div>
 </form>

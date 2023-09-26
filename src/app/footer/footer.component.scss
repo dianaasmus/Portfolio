@@ -1,12 +1,12 @@
 footer {
     height: 12rem;
-    background-color: rgba(83, 56, 228, 0.05);
+    border-top: 1px solid #4d4d4d;
     color: #9f9f9f;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 900px;
     width: 100%;
     z-index: 3;
 }
@@ -24,10 +24,11 @@ footer {
     align-items: center;
     max-width: 900px;
     width: 100%;
+    color: #4d4d4d;
 
     a {
         text-decoration: none;
-        color: rgb(159, 159, 159);
+        color: #4d4d4d;;
 
         &:hover {
             color: #5338e4;
@@ -44,13 +45,6 @@ footer {
     img {
         height: 20px;
         padding-right: 5px;
-        filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
+        filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(35%) contrast(87%);
     }
-}
-
-.arrow-up {
-    filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
-    position: relative;
-    right: -30px;
-    bottom: 10rem;
 }
