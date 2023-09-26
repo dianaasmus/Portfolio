@@ -43,7 +43,7 @@ a {
     flex-direction: column;
     color: white;
     align-items: center;
-    height: 50vh;
+    height: 45vh;
     z-index: 3;
     width: 50%;
     opacity: 0;
@@ -68,9 +68,13 @@ a {
 
 .mockup-hover {
     cursor: pointer;
-    opacity: 0.05;
+    opacity: 0.025;
     cursor: pointer;
+}
+
+.project-mockups {
     transition: all ease-in-out 225ms;
+
 }
 
 

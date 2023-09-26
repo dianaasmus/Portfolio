@@ -1,4 +1,3 @@
-// import { Component } from '@angular/core';
 import { Component, ElementRef, Renderer2, ViewChild, Input } from '@angular/core';
 
 @Component({
@@ -31,7 +30,7 @@ export class ContactMeComponent {
 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-  
+        
         scrollNote?.classList.add('d-none');
         scrollUp?.classList.remove('d-none');
         this.showArrow = true;        
@@ -47,8 +46,6 @@ export class ContactMeComponent {
   }
   
   ngOnDestroy() {
-    // Observer aufräumen
     this.observer.disconnect();
   }
-  
 }
