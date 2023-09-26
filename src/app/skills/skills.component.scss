@@ -5,12 +5,9 @@
     justify-content: center;
 
     h1 {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 2.5rem;
-        font-weight: 300;
-        margin-top: 124px;
+        font-size: 2rem;
+        margin-top: 80px;
+        text-transform: uppercase;
     }
 
     svg {
@@ -20,60 +17,55 @@
         width: 100%;
         max-width: 1000px;
     }
+}
 
-    .skills-svg {
-        position: absolute;
-        max-width: 1000px;
-        margin-left: -6px;
-    }
+.skills-svg {
+    position: absolute;
+    max-width: 1000px;
+    margin-left: -6px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        padding-top: 25vh;
-        height: 60vh;
-        position: absolute;
-        width: 80%;
-        max-width: 1000px;
-        width: auto;
-        column-gap: 135px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 25vh;
+    height: 60vh;
+    position: absolute;
+    width: 100%;
+    max-width: 900px;
 
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-            img {
-                height: 55px;
-                width: 55px;
-                cursor: pointer;
-                padding: 10px;
-                opacity: 0.5;
+        img {
+            height: 55px;
+            width: 55px;
+            cursor: pointer;
+            padding: 10px;
+            opacity: 0.5;
 
-                &:hover {
-                    // filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
-                    transition: all ease-in-out 150ms;
-                    // box-shadow: 0px 0px 8px #5338e4;
-                    opacity: 1 ;
-                }
-
-                &:hover+p {
-                    color: #ddd;
-                    transform: translateY(-10px);
-                    transition: all ease-in-out 150ms;
-                    // box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.81);
-                }
+            &:hover {
+                transition: all ease-in-out 150ms;
+                opacity: 1;
             }
 
-            p {
-                margin: 0;
-                font-size: 0.9rem;
-                padding-top: 20px;
-                text-align: center;
-                color: transparent;
-                transform: translateY(-25px);
+            &:hover+p {
+                color: #5d48d4;
+                transform: translateY(-10px);
+                transition: all ease-in-out 150ms;
             }
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            text-align: center;
+            color: transparent;
+            transform: translateY(-25px);
         }
     }
 }

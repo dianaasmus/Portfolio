@@ -1,11 +1,14 @@
 footer {
-    height: 13rem;
+    height: 12rem;
     background-color: rgba(83, 56, 228, 0.05);
     color: #9f9f9f;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+    z-index: 3;
 }
 
 .logo-footer {
@@ -15,14 +18,12 @@ footer {
 }
 
 .footer-middle {
-    gap: 25px;
+    gap: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 15%;
-    left: 15%;
-    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 100%;
 
     a {
         text-decoration: none;
@@ -47,3 +48,9 @@ footer {
     }
 }
 
+.arrow-up {
+    filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
+    position: relative;
+    right: -30px;
+    bottom: 10rem;
+}

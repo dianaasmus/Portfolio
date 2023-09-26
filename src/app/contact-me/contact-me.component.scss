@@ -1,7 +1,6 @@
 .contact-container {
     height: 100vh;
     color: #ddd;
-    display: flex;
     max-width: 900px;
     width: 100%;
     gap: 5%;
@@ -9,10 +8,13 @@
     align-items: center;
     justify-content: center;
     z-index: 3;
+    padding: 0 115px;
+    box-sizing: border-box;
 
     h1 {
         font-weight: 600;
         text-transform: uppercase;
+        text-align: center;
     }
 }
 
@@ -43,12 +45,10 @@
     textarea:focus {
         outline: none;
         border-bottom: 1px solid #5338e4;
-        // transition: all ease-in-out 225ms;
     }
 
     textarea:focus {
         max-height: 130px;
-        // transition: all ease-in-out 325ms;
     }
 
     input,

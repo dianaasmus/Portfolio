@@ -4,16 +4,22 @@
     box-sizing: border-box;
     padding: 0 115px;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .portfolio-headline {
     color: white;
     display: flex;
-    position: absolute;
     flex-direction: column;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-top: 100px;
+    }
 }
 
 .headline-btns {
@@ -42,10 +48,12 @@ a {
     width: 50%;
     opacity: 0;
     cursor: pointer;
+    transition: all ease-in-out 225ms;
 
     h1 {
         font-size: 2rem;
         text-align: start;
+        text-transform: uppercase;
     }
 
     p {
@@ -54,7 +62,7 @@ a {
 }
 
 .project-code {
-    color: #5338e4;
+    color: #5d48d4;
     margin: 0;
 }
 
