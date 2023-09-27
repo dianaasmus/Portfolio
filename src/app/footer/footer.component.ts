@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +7,4 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FooterComponent {
 
-  // constructor(private router: ActivatedRoute) {}
-
-  // openImprint() {
-  //   this.router.navigateByUrl('/Imprint');
-  // }
 }
