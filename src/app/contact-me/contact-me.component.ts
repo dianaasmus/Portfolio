@@ -7,21 +7,19 @@ import { Component, ElementRef, Renderer2, ViewChild, Input } from '@angular/cor
 })
 export class ContactMeComponent {
   @ViewChild('elementToObserve') elementToObserve!: ElementRef;
-  private observer: any;
+  private observer: any = IntersectionObserver;
   @Input() showArrow: boolean = false;
 
-
-  constructor(private renderer: Renderer2) { }
-  
+  constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit() {
-    const observer = new IntersectionObserver(this.callback, {
-      root: null, // Das Wurzelelement (null entspricht dem Viewport)
+    this.observer = new IntersectionObserver(this.callback.bind(this), {
+      root: null,
       rootMargin: '0px',
-      threshold: 0.5 // Schwellenwert für Sichtbarkeit (0 bis 1)
+      threshold: 0.5
     });
 
-    observer.observe(this.elementToObserve.nativeElement);
+    this.observer.observe(this.elementToObserve.nativeElement);
   }
 
   callback(entries: IntersectionObserverEntry[]) {
@@ -30,21 +28,17 @@ export class ContactMeComponent {
 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        
         scrollNote?.classList.add('d-none');
         scrollUp?.classList.remove('d-none');
-        this.showArrow = true;        
-
+        this.showArrow = true;
       } else {
-
         this.showArrow = false;
         scrollNote?.classList.remove('d-none');
         scrollUp?.classList.add('d-none');
-
       }
     });
   }
-  
+
   ngOnDestroy() {
     this.observer.disconnect();
   }

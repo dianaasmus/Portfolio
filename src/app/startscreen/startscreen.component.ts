@@ -9,6 +9,6 @@ export class StartscreenComponent {
   @Input() showArrow: boolean = false;
 
   openMail() {
-    window.location.href = "mailto:asmus.diana@icloud.com?";
+    window.location.href = "mailto:asmus.diana@icloud.com";
   }
 }
