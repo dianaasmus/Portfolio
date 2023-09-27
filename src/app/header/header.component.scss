@@ -25,7 +25,7 @@ header {
 
     .nav {
         display: flex;
-        gap: 50px;
+        gap: 100px;
         list-style: none;
     }
 
@@ -37,12 +37,10 @@ header {
     .nav li {
         display: inline-block;
         list-style: outside none none;
-        margin: .5em 1em;
         padding: 0;
     }
 
     .nav a {
-        padding: .5em .8em;
         color: #fff;
         position: relative;
         text-decoration: none;

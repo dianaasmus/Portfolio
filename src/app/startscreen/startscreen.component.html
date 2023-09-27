@@ -1,36 +1,19 @@
-<section routerLink="/" id="home">
-    <div class="home-about">
-        <h2>Hello, i am</h2>
-        <h1>DIANA ASMUS</h1>
-        <h2 class="align-end">Front End Developer</h2>
-    </div>
+<div class="align-column">
+    <section routerLink="/" id="home">
 
-    <div class="scroll">
-        <div>
-            <div class="scroll-note">
-                <hr>
-                <p>scroll</p>
-            </div>
-            <a class="arrow-up" href="#home">
-                <img src="../../assets/img/arrow-up.png" alt="Arrow up">
-            </a>
+        <div class="home-about">
+            <h2>Hello, i am</h2>
+            <h1>DIANA ASMUS</h1>
+            <h2 class="align-end">Front End Developer</h2>
         </div>
 
-        <div class="contact-icons">
-            <a href="https://github.com/dianaasmus" target="_blank"><img
-                    src="../../assets/img/contact-icons/github-icon.png" alt="Github Icon"></a>
-            <a><img (click)="openMail()" src="../../assets/img/contact-icons/message-outline-24.png"
-                    alt="Mail Icon"></a>
-            <a href="https://www.linkedin.com/in/diana-asmus-139131281/" target="_blank"><img
-                    src="../../assets/img/contact-icons/linkedIn-icon.png" alt="LinkedIn Icon"></a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<app-header></app-header>
-<!-- <app-startscreen class="max-width"></app-startscreen> -->
-<app-about class="max-width"></app-about>
-<app-skills class="max-width"></app-skills>
-<app-portfolio class="max-width"></app-portfolio>
-<app-contact-me class="max-width"></app-contact-me>
-<app-footer class="max-width"></app-footer>
+    <app-header></app-header>
+    <app-fixed-items></app-fixed-items>
+    <app-about></app-about>
+    <app-skills></app-skills>
+    <app-portfolio></app-portfolio>
+    <app-contact-me></app-contact-me>
+    <app-footer></app-footer>
+</div>

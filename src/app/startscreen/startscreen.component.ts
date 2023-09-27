@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-startscreen',
@@ -6,9 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./startscreen.component.scss']
 })
 export class StartscreenComponent {
-  @Input() showArrow: boolean = false;
-
-  openMail() {
-    window.location.href = "mailto:asmus.diana@icloud.com";
-  }
+  
 }

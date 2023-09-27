@@ -11,7 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { FixedItemsComponent } from './fixed-items/fixed-items.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     ContactMeComponent,
     FooterComponent,
     ImprintComponent,
-    LegalNoticeComponent
+    FixedItemsComponent
   ],
   imports: [
     BrowserModule,

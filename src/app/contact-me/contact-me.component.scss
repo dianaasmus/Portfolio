@@ -8,8 +8,10 @@
     align-items: center;
     justify-content: center;
     z-index: 3;
+    position: relative;
     padding: 0 115px;
     box-sizing: border-box;
+    border-bottom: 1px solid #4d4d4d;
 
     h1 {
         font-weight: 600;
