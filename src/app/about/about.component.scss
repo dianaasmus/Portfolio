@@ -9,11 +9,15 @@
     max-width: 1000px;
     padding: 0 115px;
     box-sizing: border-box;
+    gap: 40px;
 
     div {
 
         h1 {
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-family: "Mooli", sans-serif;
         }
 
         p {

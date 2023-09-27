@@ -25,7 +25,7 @@ header {
 
     .nav {
         display: flex;
-        gap: 100px;
+        gap: 80px;
         list-style: none;
     }
 
@@ -41,10 +41,12 @@ header {
     }
 
     .nav a {
+        padding: .5em .8em;
         color: #fff;
         position: relative;
         text-decoration: none;
         font-size: 1rem;
+        text-transform: uppercase;
     }
 
     .nav a::before,

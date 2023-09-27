@@ -15,11 +15,12 @@
     flex-direction: column;
     align-items: center;
     z-index: 3;
+    margin-top: 15vh;
 
     h1 {
         text-transform: uppercase;
         font-size: 2rem;
-        margin-top: 100px;
+        font-family: "Mooli", sans-serif;
     }
 }
 
@@ -44,9 +45,9 @@ a {
     flex-direction: column;
     color: white;
     align-items: center;
-    height: 45vh;
+    height: 319px;
     z-index: 3;
-    width: 50%;
+    width: 45%;
     opacity: 0;
     cursor: pointer;
     transition: all ease-in-out 225ms;
@@ -98,7 +99,7 @@ a {
 }
 
 .project {
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,6 +122,25 @@ a {
     //     border-top: 1px solid #5338e4;
     //     border-top-left-radius: 15vw;
     // }
+}
+
+.project-links {
+    all: unset;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+    box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
+
+    &:hover {
+        border: 1px solid #5338e4;
+        color: white;
+        transition: all 225ms ease-in-out;
+    }
 }
 
 @keyframes fadeInDesktop {

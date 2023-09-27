@@ -1,38 +1,26 @@
 .skills-imgs {
     height: 100vh;
-    color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     h1 {
+        font-weight: 600;
         font-size: 2rem;
-        margin-top: 80px;
         text-transform: uppercase;
+        font-family: "Mooli", sans-serif;
+        color: white;
     }
-
-    svg {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 100%;
-        max-width: 1000px;
-    }
-}
-
-.skills-svg {
-    position: absolute;
-    max-width: 1000px;
-    margin-left: -6px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding-top: 25vh;
     height: 50vh;
-    position: absolute;
-    width: 100%;
-    max-width: 700px;
+    width: 50vw;
+    max-width: 650px;
+    z-index: 3;
 
     div {
         display: flex;

@@ -4,8 +4,9 @@
     width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-
+    left: 50%;
+    transform: translate(-50%);
+    
     hr {
         height: 6vh;
         width: 0.5px;
