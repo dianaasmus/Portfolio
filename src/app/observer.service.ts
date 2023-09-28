@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ObserverService {
   private observers: Map<HTMLElement, IntersectionObserver> = new Map();
 
-  constructor() {}
+  constructor() { }
 
   observe(element: HTMLElement, elementComponent: any) {
     const observer = new IntersectionObserver(entries => {
@@ -14,7 +14,9 @@ export class ObserverService {
         if (entry.isIntersecting) {
           elementComponent.containerInViewport();
         } else {
-          elementComponent.containerOutOfViewport();
+          if (this.outOfViewportFunction(elementComponent)!) {
+            elementComponent.containerOutOfViewport();
+          }
         }
       });
     }, {
@@ -25,6 +27,10 @@ export class ObserverService {
 
     observer.observe(element);
     this.observers.set(element, observer);
+  }
+
+  outOfViewportFunction(elementComponent: any) {
+    return typeof elementComponent.containerOutOfViewport === 'function';
   }
 
   disconnect(element: HTMLElement) {
