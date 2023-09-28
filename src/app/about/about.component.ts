@@ -8,6 +8,7 @@ import { ObserverService } from '../observer.service';
 })
 export class AboutComponent {
   @ViewChild('aboutMe') aboutMeToObserve!: ElementRef;
+  fadeInAnimation: boolean = false;
 
   constructor(private observerService: ObserverService) { }
 
@@ -17,10 +18,6 @@ export class AboutComponent {
   }
 
   containerInViewport() {
-    console.log('about in'); 
-  }
-
-  containerOutOfViewport() {
-    console.log('about out');
+    this.fadeInAnimation = true;
   }
 }

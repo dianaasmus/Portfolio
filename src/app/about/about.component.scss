@@ -10,6 +10,7 @@
     padding: 0 115px;
     box-sizing: border-box;
     gap: 40px;
+    opacity: 0;
 
     div {
 
@@ -24,6 +25,20 @@
             max-width: 400px;
             width: 100%;
         }
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
