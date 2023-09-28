@@ -1,29 +1,20 @@
 import { Injectable } from '@angular/core';
-import { ContactMeComponent } from './contact-me/contact-me.component';
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class ObserverService {
-  private observer: IntersectionObserver | undefined;
-  private elementComponent: any;
+  private observers: Map<HTMLElement, IntersectionObserver> = new Map();
 
-  constructor() {
-    this.initObserver();
-  }
+  constructor() {}
 
-  private initObserver() {
-    this.observer = new IntersectionObserver(entries => {
-      // Hier können Sie die Callback-Logik implementieren
+  observe(element: HTMLElement, elementComponent: any) {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Das beobachtete Element ist sichtbar
-          this.elementComponent.containerInViewport();
-          
+          elementComponent.containerInViewport();
         } else {
-          // Das beobachtete Element ist nicht sichtbar
-          this.elementComponent.containerOutOfViewport();
+          elementComponent.containerOutOfViewport();
         }
       });
     }, {
@@ -31,18 +22,16 @@ export class ObserverService {
       rootMargin: '0px',
       threshold: 0.5,
     });
+
+    observer.observe(element);
+    this.observers.set(element, observer);
   }
 
-  observe(element: HTMLElement, elementComponent: any) {
-    if (this.observer) {
-      this.elementComponent = elementComponent;
-      this.observer.observe(element);
-    }
-  }
-
-  ngOnDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
+  disconnect(element: HTMLElement) {
+    const observer = this.observers.get(element);
+    if (observer) {
+      observer.disconnect();
+      this.observers.delete(element);
     }
   }
 }
