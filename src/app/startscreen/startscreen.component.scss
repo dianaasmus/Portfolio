@@ -2,6 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: scaleDown 2000ms ease-in-out forwards;
+}
+
+@keyframes scaleDown {
+    
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 #home {

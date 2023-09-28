@@ -1,4 +1,5 @@
-import { Component, ElementRef, Renderer2, ViewChild, Input } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input } from '@angular/core';
+import { ObserverService } from '../observer.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -6,40 +7,42 @@ import { Component, ElementRef, Renderer2, ViewChild, Input } from '@angular/cor
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
-  @ViewChild('elementToObserve') elementToObserve!: ElementRef;
-  private observer: any = IntersectionObserver;
+  @ViewChild('contactMe') contactMeToObserve!: ElementRef;
   @Input() showArrow: boolean = false;
+  private scrollNote!: HTMLElement | null;
+  private scrollUp!: HTMLElement | null;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private observerService: ObserverService) { }
 
   ngAfterViewInit() {
-    this.observer = new IntersectionObserver(this.callback.bind(this), {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5
-    });
+    const elementToObserve = this.contactMeToObserve.nativeElement;
+    this.observerService.observe(elementToObserve, this);
 
-    this.observer.observe(this.elementToObserve.nativeElement);
+    this.scrollNote = document.querySelector('.scroll-note');
+    this.scrollUp = document.querySelector('.arrow-up');
   }
 
-  callback(entries: IntersectionObserverEntry[]) {
-    const scrollNote = document.querySelector('.scroll-note');
-    const scrollUp = document.querySelector('.arrow-up');
-
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        scrollNote?.classList.add('d-none');
-        scrollUp?.classList.remove('d-none');
-        this.showArrow = true;
-      } else {
-        this.showArrow = false;
-        scrollNote?.classList.remove('d-none');
-        scrollUp?.classList.add('d-none');
-      }
-    });
+  containerInViewport() {
+    if (this.scrollNote && this.scrollUp) {
+      this.showArrow = true;
+      this.hideElement(this.scrollNote);
+      this.showElement(this.scrollUp);
+    }
   }
 
-  ngOnDestroy() {
-    this.observer.disconnect();
+  containerOutOfViewport() {
+    if (this.scrollNote && this.scrollUp) {
+      this.showArrow = false;
+      this.hideElement(this.scrollUp);
+      this.showElement(this.scrollNote);
+    }
+  }
+
+  showElement(element: any) {
+    element.classList.remove('d-none');
+  }
+
+  hideElement(element: any) {
+    element.classList.add('d-none');
   }
 }

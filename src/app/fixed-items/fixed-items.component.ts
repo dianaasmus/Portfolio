@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./fixed-items.component.scss']
 })
 export class FixedItemsComponent {
-  @Input() showArrow: boolean = false;
+  showArrow: boolean = false;
 
   openMail() {
     window.location.href = "mailto:asmus.diana@icloud.com";
