@@ -5,10 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class ObserverService {
   private observers: Map<HTMLElement, IntersectionObserver> = new Map();
+  // thresholdValue!: number;
 
   constructor() { }
 
-  observe(element: HTMLElement, elementComponent: any) {
+  observe(element: HTMLElement, elementComponent: any, thresholdValue: number) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -22,7 +23,7 @@ export class ObserverService {
     }, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5,
+      threshold: thresholdValue,
     });
 
     observer.observe(element);

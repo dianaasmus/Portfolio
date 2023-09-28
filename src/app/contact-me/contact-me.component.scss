@@ -12,6 +12,7 @@
     padding: 0 115px;
     box-sizing: border-box;
     border-bottom: 1px solid #4d4d4d;
+    opacity: 0;
 
     h1 {
         font-weight: 600;
@@ -20,8 +21,18 @@
     }
 }
 
-.d-none {
-    display: none;
+.fade-in {
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .form-headline {

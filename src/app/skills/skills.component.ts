@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ObserverService } from '../observer.service';
 
 @Component({
   selector: 'app-skills',
@@ -20,4 +21,17 @@ export class SkillsComponent {
     { src: '../../assets/img/icons/wordpress-icon.png', alt: 'Wordpress' },
   ];
 
+  @ViewChild('skills') skillsToObserve!: ElementRef;
+  fadeInAnimation: boolean = false;
+
+  constructor(private observerService: ObserverService) { }
+
+  ngAfterViewInit() {
+    const elementToObserve = this.skillsToObserve.nativeElement;
+    this.observerService.observe(elementToObserve, this, 0.10);
+  }
+
+  containerInViewport() {
+    this.fadeInAnimation = true;
+  }
 }

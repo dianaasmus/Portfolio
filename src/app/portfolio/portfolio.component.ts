@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ObserverService } from '../observer.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  @ViewChild('project') projectToObserve!: ElementRef;
+  fadeInAnimation: boolean = false;
   isHovered!: boolean;
 
   projects = [
@@ -17,7 +20,7 @@ export class PortfolioComponent {
       github: 'https://github.com/dianaasmus/Join-new.git',
       content: 'Join is a powerful Kanban project management tool that helps teams efficiently organize and manage their projects. With a user-friendly interface and a variety of features, Join provides an intuitive platform for collaboration and task progress.',
       code: 'HTML | CSS | JavaScript | Group project',
-      isHovered: false,
+      isHovered: false
     },
     {
       name: 'Escaping Earth',
@@ -27,7 +30,7 @@ export class PortfolioComponent {
       github: 'https://github.com/dianaasmus/Escaping-Earth.git',
       content: 'In Escaping Earth, you control a character as they explore a world full of challenges and obstacles. A dynamic and interactive game that is easy for players of all ages to enjoy. Get ready to jump, run, and conquer levels in this thrilling adventure!',
       code: 'HTML | CSS | JavaScript OOP',
-      isHovered: false,
+      isHovered: false
     },
     // {
     //   name: 'DA-Bubble',
@@ -50,4 +53,14 @@ export class PortfolioComponent {
     this.filteredProjects = this.projects.slice();
   }
 
+  constructor(private observerService: ObserverService) { }
+
+  ngAfterViewInit() {
+    const elementToObserve = this.projectToObserve.nativeElement;
+    this.observerService.observe(elementToObserve, this, 0.10);
+  }
+
+  containerInViewport() {
+    this.fadeInAnimation = true;
+  }
 }
