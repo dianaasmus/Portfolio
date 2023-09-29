@@ -14,7 +14,7 @@ export class AboutComponent {
 
   ngAfterViewInit() {
     const elementToObserve = this.aboutMeToObserve.nativeElement;
-    this.observerService.observe(elementToObserve, this, 0.10);
+    this.observerService.observe(elementToObserve, this, 0.5);
   }
 
   containerInViewport() {
