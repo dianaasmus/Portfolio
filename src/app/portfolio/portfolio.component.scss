@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     opacity: 0;
+    gap: 13vh;
 }
 
 .fade-in {
@@ -98,7 +99,7 @@ a {
     display: flex;
     gap: 50px;
     margin-top: 30px;
-    width: 22vw;
+    width: 300px;
 }
 
 .project {
@@ -106,6 +107,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-bottom: 50px;
 }
 

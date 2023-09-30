@@ -11,6 +11,7 @@ export class ContactMeComponent {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
   fadeInAnimation: boolean = false;
 
   constructor(private observerService: ObserverService) { }
@@ -28,14 +29,17 @@ export class ContactMeComponent {
     const nameField = this.nameField.nativeElement;
     const messageField = this.messageField.nativeElement;
     const sendBtn = this.sendBtn.nativeElement;
+    const emailField = this.emailField.nativeElement;
     
     nameField.disabled = true;
     messageField.disabled = true;
     sendBtn.disabled = true;
+    emailField.disabled = true;
 
     //send (animation)
     let formData = new FormData();
     formData.append('name', nameField.value);
+    formData.append('email', emailField.value);
     formData.append('message', messageField.value);
 
     await fetch('https://dianaasmus.com/send_mail.php', {
@@ -46,5 +50,6 @@ export class ContactMeComponent {
     nameField.disabled = false;
     messageField.disabled = false;
     sendBtn.disabled = false;
+    emailField.disabled = false;
   }
 }

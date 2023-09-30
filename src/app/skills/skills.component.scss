@@ -48,7 +48,7 @@
             width: 55px;
             cursor: pointer;
             padding: 10px;
-            opacity: 0.5;
+            opacity: 1;
 
             &:hover {
                 transition: all ease-in-out 150ms;
@@ -57,7 +57,7 @@
 
             &:hover+p {
                 color: #5d48d4;
-                transform: translateY(-10px);
+                // transform: translateY(-10px);
                 transition: all ease-in-out 150ms;
             }
         }
@@ -67,8 +67,8 @@
             font-size: 0.9rem;
             padding-top: 20px;
             text-align: center;
-            color: transparent;
-            transform: translateY(-25px);
+            color: #ddd;
+            // transform: translateY(-25px);
         }
     }
 }

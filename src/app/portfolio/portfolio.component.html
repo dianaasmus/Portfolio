@@ -7,17 +7,12 @@
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
-    
-    <div class="project" *ngFor="let project of filteredProjects">
-        <div class="project-context" (mouseover)="project.isHovered = true" (mouseout)="project.isHovered = false"
-            [class.show-context]="project.isHovered">
+    <div class="project" *ngFor="let project of filteredProjects" (mouseover)="project.isHovered = true"
+        (mouseout)="project.isHovered = false">
+        <div class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
-            <div class="project-context-btns">
-                <a href="{{ project.website }}" target="_blank" class="project-links">Try</a>
-                <a href="{{ project.github }}" target="_blank" class="project-links">Github</a>
-            </div>
         </div>
 
         <div class="project-mockups" [class.mockup-hover]="project.isHovered">
@@ -25,6 +20,11 @@
                 [alt]="project.imgs + '-mobile'">
             <img class="join-desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'"
                 [alt]="project.imgs + '-desktop'">
+        </div>
+
+        <div class="project-context-btns">
+            <a href="{{ project.website }}" target="_blank" class="project-links">Try</a>
+            <a href="{{ project.github }}" target="_blank" class="project-links">Github</a>
         </div>
     </div>
 </section>
