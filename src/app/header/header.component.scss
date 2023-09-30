@@ -16,6 +16,10 @@ header {
         max-width: 1000px;
         width: 100%;
         padding: 0 30px;
+
+        @media (max-width: 500px) {
+            padding: 0px 17px;
+        }
     }
 
     .header-img {
@@ -23,10 +27,29 @@ header {
         cursor: pointer;
     }
 
+    .menu-img {
+        display: none;
+
+        @media (max-width: 750px) {
+            display: flex;
+            filter: invert(90%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(99%);
+            width: 24px;
+            transition: all ease-in-out 125ms;
+
+            &:hover {
+                filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
+            }
+        }
+    }
+
     .nav {
         display: flex;
-        gap: 80px;
+        gap: 50px;
         list-style: none;
+
+        @media (max-width: 750px) {
+            display: none;
+        }
     }
 
     .nav * {
@@ -47,6 +70,7 @@ header {
         text-decoration: none;
         font-size: 1rem;
         text-transform: uppercase;
+
     }
 
     .nav a::before,

@@ -1,5 +1,5 @@
 .portfolio-container {
-    width: 100%;
+    width: 85vw;
     max-width: 900px;
     box-sizing: border-box;
     padding: 0 115px;
@@ -9,6 +9,10 @@
     align-items: center;
     opacity: 0;
     gap: 13vh;
+
+    @media (max-width: 500px) {
+        gap: 0;
+    }
 }
 
 .fade-in {
@@ -43,6 +47,45 @@
 .headline-btns {
     display: flex;
     gap: 30px;
+
+    @media (max-width: 500px) {
+        gap: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+            font-size: 0.9rem;
+            width: 86px;
+            min-width: 0;
+            margin: 0;
+        }
+    }
+}
+
+button {
+    all: unset;
+    display: flex;
+    width: 100%;
+    min-width: 100px;
+    height: 40px;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+    box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
+    transition: all 125ms ease-in-out;
+
+    @media (max-width: 500px) {
+        font-size: 0.9rem;
+        width: 85px;
+    }
+
+    &:hover {
+        border: 1px solid #5338e4;
+        color: white;
+    }
 }
 
 a {
@@ -61,22 +104,35 @@ a {
     flex-direction: column;
     color: white;
     align-items: center;
-    height: 319px;
+    height: 50vh;
     z-index: 3;
-    width: 100%;
+    width: 65vw;
     max-width: 600px;
     opacity: 0;
     cursor: pointer;
     transition: all ease-in-out 125ms;
 
+    @media (max-width: 700px) {
+        height: 53vh;
+        opacity: 1;
+    }
+
     h1 {
         font-size: 2rem;
         text-align: start;
         text-transform: uppercase;
+
+        @media (max-width: 500px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
         text-align: center;
+
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
     }
 }
 
@@ -92,13 +148,32 @@ a {
 
 .project-mockups {
     transition: all ease-in-out 125ms;
+
+    @media (max-width: 700px) {
+        position: relative;
+        top: 30vh;
+    }
 }
 
 .project-context-btns {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     margin-top: 30px;
     width: 300px;
+    z-index: 6;
+
+    @media (max-width: 700px) {
+        position: relative;
+        top: 30vh;
+        gap: 10px;
+        width: 200px;
+        margin-top: 30px;
+
+
+        a {
+            margin: 0;
+        }
+    }
 }
 
 .project {
@@ -108,6 +183,10 @@ a {
     justify-content: center;
     flex-direction: column;
     margin-bottom: 50px;
+
+    @media (max-width: 700px) {
+        height: 80vh;
+    }
 }
 
 .project-links {
@@ -129,25 +208,38 @@ a {
     }
 }
 
-.join-mobile {
+.mobile[alt="join-mobile"] {
     position: absolute;
-    height: 230px;
+    max-width: 116px;
+    width: 13vw;
     z-index: 1;
-    transform: translateX(5px) translateY(100px);
+    transform: translateX(2vw) translateY(14vw);
+
+    @media (min-width: 720px) {
+        transform: translateX(5px) translateY(94px);
+    }
 }
 
-.join-mobile[alt="escaping-earth-mobile"] {
-    width: 250px;
-    height: 130px;
+.mobile[alt="escaping-earth-mobile"] {
+    position: absolute;
+    max-width: 250px;
+    width: 30vw;
     z-index: 1;
-    transform: translateX(370px) translateY(200px);
+    transform: translateX(42vw) translateY(24vw);
+
+    @media (min-width: 790px) {
+        transform: translateX(370px) translateY(200px);
+    }
 }
 
-.join-desktop {
-    height: 330px;
-    transform: translateX(50px);
+.desktop[alt="join-desktop"] {
+    max-width: 570px;
+    width: 70vw;
+    transform: translateX(3vw);
 }
 
-.join-desktop[alt="escaping-earth-desktop"] {
-    transform: translateX(4px) translateY(0px);
+.desktop[alt="escaping-earth-desktop"] {
+    max-width: 570px;
+    width: 70vw;
+    transform: translateX(0vw);
 }

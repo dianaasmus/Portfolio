@@ -33,9 +33,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 50vh;
-    width: 60vw;
+    width: 90vw;
     max-width: 650px;
     z-index: 3;
+
+    @media (max-width: 750px) {
+        grid-template-columns: repeat(3, 1fr);
+        width: 75vw;
+        height: unset;
+    }
 
     div {
         display: flex;
@@ -50,6 +56,11 @@
             padding: 10px;
             opacity: 1;
 
+            @media (max-width: 750px) {
+                height: 45px;
+                width: 45px;
+            }
+
             &:hover+p {
                 color: #5d48d4;
                 transition: all ease-in-out 150ms;
@@ -62,6 +73,10 @@
             padding-top: 20px;
             text-align: center;
             color: #ddd;
+
+            @media (max-width: 750px) {
+                padding: 20px 0;
+            }
         }
     }
 }

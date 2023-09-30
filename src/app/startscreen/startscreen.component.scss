@@ -26,7 +26,7 @@
 
 .home-about {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     white-space: nowrap;
     transform: translate(-50%, -50%);
@@ -39,6 +39,10 @@
         font-family: 'Mooli', sans-serif;
         font-weight: 600;
         color: #dddddd;
+
+        @media (max-width: 650px) {
+            font-size: 10vw;
+        }
     }
 
     h2 {
@@ -48,6 +52,10 @@
         color: grey;
         font-size: 1rem;
         text-transform: uppercase;
+
+        @media (max-width: 650px) {
+            font-size: 4vw;
+        }
     }
 }
 
