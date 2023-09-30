@@ -51,7 +51,7 @@ a {
 
 .show-context {
     opacity: 1 !important;
-    transition: all ease-in-out 225ms;
+    transition: all ease-in-out 125ms;
 }
 
 .project-context {
@@ -66,7 +66,7 @@ a {
     max-width: 600px;
     opacity: 0;
     cursor: pointer;
-    transition: all ease-in-out 225ms;
+    transition: all ease-in-out 125ms;
 
     h1 {
         font-size: 2rem;
@@ -91,7 +91,7 @@ a {
 }
 
 .project-mockups {
-    transition: all ease-in-out 225ms;
+    transition: all ease-in-out 125ms;
 }
 
 .project-context-btns {
@@ -106,7 +106,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+    margin-bottom: 50px;
 }
 
 .project-links {
@@ -124,7 +124,7 @@ a {
     &:hover {
         border: 1px solid #5338e4;
         color: white;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
     }
 }
 
@@ -139,7 +139,7 @@ a {
     width: 250px;
     height: 130px;
     z-index: 1;
-    transform: translateX(320px) translateY(200px);
+    transform: translateX(370px) translateY(200px);
 }
 
 .join-desktop {
@@ -148,5 +148,5 @@ a {
 }
 
 .join-desktop[alt="escaping-earth-desktop"] {
-    transform: translateX(-45px) translateY(0px);
+    transform: translateX(4px) translateY(0px);
 }

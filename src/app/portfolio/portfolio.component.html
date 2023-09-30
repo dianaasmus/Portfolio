@@ -7,6 +7,7 @@
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
+    
     <div class="project" *ngFor="let project of filteredProjects">
         <div class="project-context" (mouseover)="project.isHovered = true" (mouseout)="project.isHovered = false"
             [class.show-context]="project.isHovered">

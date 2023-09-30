@@ -22,7 +22,7 @@
 }
 
 .fade-in {
-    animation: fadeIn 2000ms ease-in-out forwards;
+    animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -76,6 +76,6 @@
         all: unset;
         border-bottom: 1px solid #ddd;
         max-height: 20px;
-        transition: all ease-in-out 325ms;
+        transition: all ease-in-out 225ms;
     }
 }

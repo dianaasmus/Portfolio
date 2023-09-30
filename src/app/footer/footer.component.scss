@@ -1,12 +1,25 @@
 footer {
     height: 12rem;
-    color: #9f9f9f;
+    gap: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    max-width: 900px;
+    width: 100%;
+    color: #4d4d4d;
     position: relative;
+    z-index: 3;
+
+    a {
+        text-decoration: none;
+        color: #4d4d4d;;
+
+        &:hover {
+            color: #5338e4;
+            transition: all 125ms ease-in-out;
+        }
+    }
 }
 
 .d-none {
@@ -19,25 +32,6 @@ footer {
     filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
 }
 
-.footer-middle {
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 900px;
-    width: 100%;
-    color: #4d4d4d;
-
-    a {
-        text-decoration: none;
-        color: #4d4d4d;;
-
-        &:hover {
-            color: #5338e4;
-            transition: all 125ms ease-in-out;
-        }
-    }
-}
 
 .copyright-name-year {
     display: flex;

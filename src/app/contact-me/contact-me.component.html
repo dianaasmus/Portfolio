@@ -1,4 +1,4 @@
-<form (submit)="sendMail()" class="contact-container" id="contactMe" [class.fade-in]="fadeInAnimation" #contactMe>
+<form (submit)="sendMail()" class="contact-container" id="contactMe" [class.fade-in]="fadeInAnimation" ngNativeValidate #contactMe>
     <div class="form-headline">
         <h1>Let's talk business</h1>
         <p>Now that you know a lot about me, let me know if you are interested to work with me.</p>
@@ -9,6 +9,7 @@
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" autocomplete="on" required #nameField>
+        
 
         <!-- <label for="email">Email address</label>
         <input type="email" id="email" name="email" autocomplete="on"> -->

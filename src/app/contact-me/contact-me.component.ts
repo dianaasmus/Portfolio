@@ -24,14 +24,27 @@ export class ContactMeComponent {
     this.fadeInAnimation = true;
   }
 
-  sendMail() {
+  async sendMail() {
     const nameField = this.nameField.nativeElement;
     const messageField = this.messageField.nativeElement;
     const sendBtn = this.sendBtn.nativeElement;
-    // action="https://dianaasmus.com/send_mail.php"
-    console.log('sending', this.contactMe);
+    
     nameField.disabled = true;
     messageField.disabled = true;
     sendBtn.disabled = true;
+
+    //send (animation)
+    let formData = new FormData();
+    formData.append('name', nameField.value);
+    formData.append('message', messageField.value);
+
+    await fetch('https://dianaasmus.com/send_mail.php', {
+      method: 'POST',
+      body: formData
+    })
+
+    nameField.disabled = false;
+    messageField.disabled = false;
+    sendBtn.disabled = false;
   }
 }

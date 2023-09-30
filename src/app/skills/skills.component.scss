@@ -16,7 +16,7 @@
 }
 
 .fade-in {
-    animation: fadeIn 2000ms ease-in-out forwards;
+    animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -33,7 +33,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 50vh;
-    width: 50vw;
+    width: 60vw;
     max-width: 650px;
     z-index: 3;
 

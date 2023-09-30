@@ -28,19 +28,6 @@
     }
 }
 
-.fade-in {
-    animation: fadeIn 2000ms ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .about-me-svg {
     position: absolute;
     margin-left: 5px;
@@ -54,4 +41,17 @@
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 120px;
+}
+
+.fade-in {
+    animation: fadeIn 1000ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

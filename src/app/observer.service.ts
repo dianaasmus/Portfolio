@@ -1,14 +1,26 @@
 import { Injectable } from '@angular/core';
 
+/**
+ * The `ObserverService` provides functionality for observing elements in the DOM.
+ * It uses IntersectionObserver to trigger events when elements enter or exit the viewport.
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class ObserverService {
+  /**
+   * A map to store observers associated with specific elements.
+   */
   private observers: Map<HTMLElement, IntersectionObserver> = new Map();
-  // thresholdValue!: number;
 
-  constructor() { }
 
+  /**
+   * Observes a specified element in the DOM and triggers containerInViewport or containerOutOfViewport functions
+   * of the associated component when the element enters or exits the viewport.
+   * @param {HTMLElement} element - The DOM element to observe.
+   * @param {any} elementComponent - The component associated with the element.
+   * @param {number} thresholdValue - The threshold value for triggering the intersection.
+   */
   observe(element: HTMLElement, elementComponent: any, thresholdValue: number) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -30,10 +42,21 @@ export class ObserverService {
     this.observers.set(element, observer);
   }
 
-  outOfViewportFunction(elementComponent: any) {
+
+  /**
+   * Checks if the containerOutOfViewport function exists in the component.
+   * @param {any} elementComponent - The component to check.
+   * @returns {boolean} - True if the function exists, false otherwise.
+   */
+  outOfViewportFunction(elementComponent: any): boolean {
     return typeof elementComponent.containerOutOfViewport === 'function';
   }
 
+
+  /**
+   * Disconnects the observer associated with a specific element.
+   * @param {HTMLElement} element - The DOM element to disconnect the observer from.
+   */
   disconnect(element: HTMLElement) {
     const observer = this.observers.get(element);
     if (observer) {
