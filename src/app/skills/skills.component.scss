@@ -50,14 +50,8 @@
             padding: 10px;
             opacity: 1;
 
-            &:hover {
-                transition: all ease-in-out 150ms;
-                opacity: 1;
-            }
-
             &:hover+p {
                 color: #5d48d4;
-                // transform: translateY(-10px);
                 transition: all ease-in-out 150ms;
             }
         }
@@ -68,7 +62,6 @@
             padding-top: 20px;
             text-align: center;
             color: #ddd;
-            // transform: translateY(-25px);
         }
     }
 }
