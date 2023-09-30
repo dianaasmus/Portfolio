@@ -144,6 +144,10 @@ a {
 .mockup-hover {
     opacity: 0.025;
     cursor: pointer;
+
+    @media (max-width: 700px) {
+        opacity: 1;
+    }
 }
 
 .project-mockups {
@@ -151,7 +155,7 @@ a {
 
     @media (max-width: 700px) {
         position: relative;
-        top: 30vh;
+        top: 24vh;
     }
 }
 
@@ -164,7 +168,7 @@ a {
 
     @media (max-width: 700px) {
         position: relative;
-        top: 30vh;
+        top: 24vh;
         gap: 10px;
         width: 200px;
         margin-top: 30px;
@@ -185,7 +189,7 @@ a {
     margin-bottom: 50px;
 
     @media (max-width: 700px) {
-        height: 80vh;
+        height: 90vh;
     }
 }
 

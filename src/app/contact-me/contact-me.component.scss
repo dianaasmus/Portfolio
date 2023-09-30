@@ -2,7 +2,7 @@
     height: 100vh;
     color: #ddd;
     max-width: 900px;
-    width: 100%;
+    width: 80vw;
     gap: 5%;
     display: flex;
     align-items: center;
@@ -13,6 +13,12 @@
     box-sizing: border-box;
     border-bottom: 1px solid #4d4d4d;
     opacity: 0;
+
+    @media (max-width: 820px) {
+        width: 70vw;
+        flex-direction: column;
+        padding: 0;
+    }
 
     h1 {
         font-weight: 600;
@@ -41,6 +47,14 @@
     align-items: center;
     flex-direction: column;
 
+    @media (max-width: 820px) {
+        width: 70vw;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
     p {
         text-align: center;
     }
@@ -53,10 +67,21 @@
     background-color: transparent;
     box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
     width: 50%;
+    max-width: 335px;
     height: fit-content;
     padding: 20px;
     box-sizing: border-box;
     gap: 10px;
+
+    @media (max-width: 820px) {
+        width: 70vw;
+    }
+
+    h1 {
+        @media (max-width: 820px) {
+            font-size: 1.5rem;
+        }
+    }
 
     input:focus,
     textarea:focus {

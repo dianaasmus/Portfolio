@@ -16,7 +16,7 @@ export class PortfolioComponent {
    */
   @ViewChild('project') projectToObserve!: ElementRef;
 
-  
+
   /**
    * A flag indicating whether to trigger a fade-in animation.
    */
@@ -26,8 +26,19 @@ export class PortfolioComponent {
   /**
    * A flag indicating whether a project is hovered.
    */
-  isHovered!: boolean;
+  public isHovered: boolean = false;
 
+  updateIsHovered() {
+    if (window.matchMedia('(min-width: 700px)').matches) {
+      this.isHovered = true;
+    } else {
+      this.isHovered = false;
+    }
+  }
+
+  private handleResize() {
+    this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
+  }
 
   /**
    * An array containing project information objects.
@@ -83,7 +94,12 @@ export class PortfolioComponent {
    * Constructor for the `PortfolioComponent` class.
    * @param {ObserverService} observerService - The service for observing DOM elements.
    */
-  constructor(private observerService: ObserverService) { }
+  constructor(private observerService: ObserverService) {
+    this.updateIsHovered(); // Initialer Aufruf
+
+    // Event-Listener für das Ändern der Fenstergröße
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
 
 
   /**

@@ -13,7 +13,8 @@ footer {
 
     a {
         text-decoration: none;
-        color: #4d4d4d;;
+        color: #4d4d4d;
+        ;
 
         &:hover {
             color: #5338e4;
@@ -37,6 +38,12 @@ footer {
     display: flex;
     align-items: center;
     font-size: 1.3rem;
+
+    span {
+        @media (max-width: 500px) {
+            font-size: 1.1rem;
+        }
+    }
 
     img {
         height: 20px;
