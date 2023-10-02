@@ -28,16 +28,6 @@ export class PortfolioComponent {
    */
   public isHovered: boolean = false;
 
-
-  updateIsHovered() {
-    if (window.matchMedia('(min-width: 700px)').matches) {
-      this.isHovered = true;
-    } else {
-      this.isHovered = false;
-    }
-  }
-
-
   private handleResize() {
     this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
   }
@@ -63,11 +53,20 @@ export class PortfolioComponent {
       filter: 'JavaScript',
       website: 'https://diana-asmus.developerakademie.net/Escaping%20Earth/index.html',
       github: 'https://github.com/dianaasmus/Escaping-Earth.git',
-      content: 'In Escaping Earth, you control a character as they explore a world full of challenges and obstacles. A dynamic and interactive game that is easy for players of all ages to enjoy. Get ready to jump, run, and conquer levels in this thrilling adventure!',
+      content: 'In Escaping Earth, you control a character as they explore a world full of challenges and obstacles. A dynamic and interactive game that is easy for players of all ages to enjoy.',
       code: 'HTML | CSS | JavaScript OOP',
       isHovered: false
     }
   ];
+
+
+  updateIsHovered() {
+    if (window.matchMedia('(min-width: 700px)').matches) {
+      this.isHovered = true;
+    } else {
+      this.isHovered = false;
+    }
+  }
 
 
   /**

@@ -3,7 +3,6 @@
 ########### CONFIG ###############
 
 $recipient = 'asmus.diana@icloud.com'; # Bitte hier deine E-Mail angeben
-$redirect = 'success.html';
 
 ########### CONFIG END ###########
 
