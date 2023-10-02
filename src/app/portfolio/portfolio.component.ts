@@ -28,6 +28,7 @@ export class PortfolioComponent {
    */
   public isHovered: boolean = false;
 
+
   updateIsHovered() {
     if (window.matchMedia('(min-width: 700px)').matches) {
       this.isHovered = true;
@@ -36,10 +37,12 @@ export class PortfolioComponent {
     }
   }
 
+
   private handleResize() {
     this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
   }
 
+  
   /**
    * An array containing project information objects.
    */

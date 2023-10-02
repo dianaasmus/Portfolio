@@ -19,14 +19,6 @@ $redirect = 'success.html';
 #
 ##################################
 
-###############################
-#
-#        DON'T CHANGE ANYTHING FROM HERE!
-#
-#        Ab hier nichts mehr ändern!
-#
-###############################
-
 if (empty($recipient)) {
     die("Bitte geben Sie die E-Mail-Adresse in Zeile 5 an.");
 }
