@@ -31,6 +31,12 @@
     animation: fadeIn 1000ms ease-in-out forwards;
 }
 
+.email-sent-style {
+    text-align: center;
+    color: #8371e3;
+    animation: fadeIn 700ms ease-in-out forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

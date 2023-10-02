@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  public openNavigaton: boolean = false;
 
+  openNav() {
+    this.openNavigaton = true;
+  }
 }

@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { FixedItemsComponent } from './fixed-items/fixed-items.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MobileNavComponent } from './mobile-nav/mobile-nav.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactMeComponent,
     FooterComponent,
     ImprintComponent,
-    FixedItemsComponent
+    FixedItemsComponent,
+    MobileNavComponent
   ],
   imports: [
     BrowserModule,

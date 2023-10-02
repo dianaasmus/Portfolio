@@ -16,6 +16,7 @@ header {
         max-width: 1000px;
         width: 100%;
         padding: 0 30px;
+        z-index: 3;
 
         @media (max-width: 500px) {
             padding: 0px 17px;
@@ -35,6 +36,7 @@ header {
             filter: invert(90%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(99%);
             width: 24px;
             transition: all ease-in-out 125ms;
+            cursor: pointer;
 
             &:hover {
                 filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
@@ -110,33 +112,4 @@ header {
     .nav a:hover {
         color: rgb(83, 56, 228);
     }
-
-    // div {
-    //     display: flex;
-    //     gap: 50px;
-
-    //     a {
-    //         text-decoration: none;
-    //         // color: white;
-    //         position: relative;
-    //         text-transform: uppercase;
-    //         color: transparent;
-    //         -webkit-text-stroke: 1px #5338e4;
-
-    //         &::before {
-    //             content: attr(data-text);
-    //             position: absolute;
-    //             color: var(--clr);
-    //             width: 0;
-    //             overflow: hidden;
-    //             transition: 1s;
-    //             border-right: 2px solid var(--clr);
-    //         }
-
-    //         &:hover::before {
-    //             width: 100%;
-    //             -webkit-text-stroke: 1px var(--clr);
-    //         }
-    //     }
-    // }
 }

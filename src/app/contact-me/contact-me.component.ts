@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
 @Component({
@@ -12,11 +12,11 @@ export class ContactMeComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('formContent') formContent!: any;
   fadeInAnimation: boolean = false;
-  emailsent: boolean = false;
+  emailSent: boolean = false;
 
-  
-  constructor(private observerService: ObserverService) { }
+  constructor(private observerService: ObserverService, private renderer: Renderer2) { }
 
 
   /**
@@ -57,6 +57,7 @@ export class ContactMeComponent {
     } finally {
       this.enableFields([nameField, messageField, sendBtn, emailField]);
       this.emptyFields([nameField, messageField, emailField]);
+      this.sentMailFeedback();
     }
   }
 
@@ -128,5 +129,21 @@ export class ContactMeComponent {
     fields.forEach((field) => {
       field.value = '';
     });
+  }
+
+
+  /**
+   * Sets the emailSent flag to true and displays a success message in the form content.
+   */
+  sentMailFeedback(): void {
+    this.emailSent = true;
+    const formContent = document.getElementById('formContent');
+    formContent!.innerHTML = '';
+    formContent!.innerHTML = `
+      <div>
+        <p>Your email has been sent successfully!</p>
+        <p>Thank you for contacting me.</p>
+      </div>
+    `;
   }
 }
