@@ -37,10 +37,18 @@
     z-index: 3;
     margin-top: 15vh;
 
+    @media (max-width: 500px) {
+        width: 50vw;
+    }
+
     h1 {
         text-transform: uppercase;
         font-size: 2rem;
         font-family: "Mooli", sans-serif;
+
+        @media (max-width: 500px) {
+            font-size: 1.5rem;
+        }
     }
 }
 

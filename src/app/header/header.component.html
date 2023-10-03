@@ -11,6 +11,7 @@
             <li><a href="#contactMe">Contact</a></li>
         </ul>
 
-        <img (click)="openNav()" src="../../assets/img/menu.png" class="menu-img" alt="Menu Img">
+        <img (click)="showNav()" src="../../assets/img/menu.png" class="menu-img" alt="Menu Img">
     </div>
+    <app-mobile-nav [openNavigaton]="openNavigaton"></app-mobile-nav>
 </header>

@@ -27,6 +27,10 @@
             font-size: 2rem;
             text-transform: uppercase;
             font-family: "Mooli", sans-serif;
+
+            @media (max-width: 500px) {
+                font-size: 1.5rem;
+            }
         }
 
         p {

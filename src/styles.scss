@@ -6,9 +6,13 @@ body {
     margin: 0;
     font-family: sans-serif;
     font-weight: 300;
-    margin: 0;
     color: #dddddd;
+}
+
+.hide-overflow {
     overflow-x: hidden;
+    width: 100%;
+    position: absolute;
 }
 
 button {
