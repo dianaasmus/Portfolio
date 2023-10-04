@@ -27,11 +27,7 @@ export class PortfolioComponent {
    * A flag indicating whether a project is hovered.
    */
   public isHovered: boolean = false;
-
-  // private handleResize() {
-  //   this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
-  // }
-
+  
 
   /**
    * An array containing project information objects.
@@ -70,6 +66,10 @@ export class PortfolioComponent {
   ];
 
 
+  /**
+   * Handles the mouse over event for a project card.
+   * @param {number} index - The index of the project card in the list.
+   */
   onMouseOver(index: number) {
     if (index !== 2 && this.isDektop()) {
       this.filteredProjects[index].isHovered = true;
@@ -77,13 +77,21 @@ export class PortfolioComponent {
   }
 
 
+  /**
+   * Handles the mouse out event for a project card.
+   * @param {number} index - The index of the project card in the list.
+   */
   onMouseOut(index: number) {
     if (index !== 2 && this.isDektop()) {
       this.filteredProjects[index].isHovered = false;
     }
   }
 
-
+  
+  /**
+   * Checks if the screen width is greater than or equal to 700px.
+   * @returns {boolean} - True if the screen width is greater than or equal to 700px, false otherwise.
+   */
   isDektop() {
     return window.matchMedia('(min-width: 700px)').matches;
   }
@@ -129,17 +137,6 @@ export class PortfolioComponent {
   ngAfterViewInit() {
     const elementToObserve = this.projectToObserve.nativeElement;
     this.observerService.observe(elementToObserve, this, 0.25);
-
-    this.showSimpleCRMPreview();
-  }
-
-
-  showSimpleCRMPreview() {
-    const simpleCRMLinks = document.getElementById('simple-crm');
-
-    if (simpleCRMLinks) {
-      simpleCRMLinks.style.marginTop = "10vh";
-    }
   }
 
 

@@ -7,10 +7,10 @@
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
-    <div class="project" *ngFor="let project of filteredProjects; let i = index" 
+    <div id="{{ project.imgs }}" class="project" *ngFor="let project of filteredProjects; let i = index" 
     (mouseover)="onMouseOver(i)" 
     (mouseout)="onMouseOut(i)">
-        <div id="{{ project.imgs }}" class="project-context" [class.show-context]="project.isHovered">
+        <div id="{{ project.imgs }}-content" class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
