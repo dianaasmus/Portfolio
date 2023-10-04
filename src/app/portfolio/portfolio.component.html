@@ -1,15 +1,21 @@
 <section class="portfolio-container" id="portfolio" [class.fade-in]="fadeInAnimation" #project>
+
     <div class="portfolio-headline">
+
         <h1>Portfolio</h1>
+        
         <div class="headline-btns">
             <button (click)="resetFilter()">All</button>
             <button (click)="filterByCode('JavaScript')">JavaScript</button>
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
+
     </div>
+
     <div id="{{ project.imgs }}" class="project" *ngFor="let project of filteredProjects; let i = index" 
     (mouseover)="onMouseOver(i)" 
     (mouseout)="onMouseOut(i)" (click)="clickedProject(i)">
+
         <div id="{{ project.imgs }}-content" class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
@@ -17,9 +23,9 @@
         </div>
 
         <div id="{{ project.imgs }}-mockups" class="project-mockups" [class.mockup-hover]="project.isHovered">
-            <img class="mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'"
+            <img class="mobile" [src]="'../../assets/img/project-imgs/' + project.imgs + '-mobile.png'"
                 [alt]="project.imgs + '-mobile'">
-            <img class="desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'"
+            <img class="desktop" [src]="'../../assets/img/project-imgs/' + project.imgs + '-desktop.png'"
                 [alt]="project.imgs + '-desktop'">
         </div>
 
@@ -27,5 +33,7 @@
             <a href="{{ project.website }}" target="_blank" class="project-links">Try</a>
             <a href="{{ project.github }}" target="_blank" class="project-links">Github</a>
         </div>
+
     </div>
+
 </section>

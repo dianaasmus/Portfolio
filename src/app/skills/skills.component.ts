@@ -1,10 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
-/**
- * The `SkillsComponent` is responsible for displaying a section that showcases technical skills.
- * It observes a specific DOM element and triggers a fade-in animation when the element becomes visible in the viewport.
- */
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',

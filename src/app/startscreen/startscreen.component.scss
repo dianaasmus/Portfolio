@@ -31,6 +31,7 @@
     white-space: nowrap;
     transform: translate(-50%, -50%);
     color: white;
+    z-index: 3;
 
     h1 {
         font-size: 5rem;
@@ -49,13 +50,12 @@
         font-weight: 100;
         letter-spacing: 1px;
         margin: 10px 0;
-        color: grey;
+        color: #6c50ff;
         font-size: 1rem;
         text-transform: uppercase;
 
         @media (max-width: 650px) {
             font-size: 4vw;
-            color: #5338e4;
         }
     }
 }

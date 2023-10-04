@@ -16,6 +16,7 @@ export class ContactMeComponent {
   fadeInAnimation: boolean = false;
   emailSent: boolean = false;
 
+
   constructor(private observerService: ObserverService, private renderer: Renderer2) { }
 
 
@@ -46,11 +47,10 @@ export class ContactMeComponent {
     const sendBtn = this.sendBtn.nativeElement;
     const emailField = this.emailField.nativeElement;
 
-    // Disable input fields and send button
     this.disableFields([nameField, messageField, sendBtn, emailField]);
 
     try {
-      const formData = this.createFormData(nameField.value, emailField.value, messageField.value);
+      const formData = await this.createFormData(nameField.value, emailField.value, messageField.value);
       await this.sendFormData(formData);
     } catch (error) {
       console.error('Error sending data:', error);
@@ -85,14 +85,12 @@ export class ContactMeComponent {
    */
   async sendFormData(formData: FormData): Promise<void> {
     try {
-      const response = await fetch('https://dianaasmus.com/send_mail.php', {
+      
+      await fetch('https://dianaasmus.com/send_mail.php', {
         method: 'POST',
         body: formData
       });
 
-      if (!response.ok) {
-        throw new Error('Server reported an error');
-      }
     } catch (error) {
       throw error;
     }

@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
 
-/**
- * The `ObserverService` provides functionality for observing elements in the DOM.
- * It uses IntersectionObserver to trigger events when elements enter or exit the viewport.
- */
 @Injectable({
   providedIn: 'root'
 })

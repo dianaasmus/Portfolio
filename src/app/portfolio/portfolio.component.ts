@@ -1,10 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
-/**
- * The `PortfolioComponent` is responsible for displaying a portfolio of projects.
- * It observes a specific DOM element and handles project filtering and animations.
- */
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -28,6 +24,9 @@ export class PortfolioComponent {
    */
   public isHovered: boolean = false;
 
+  /**
+   * A flag indicating whether a mockup is clicked.
+   */
   clickedMockup:boolean = false;
 
 
@@ -74,6 +73,10 @@ export class PortfolioComponent {
   filteredProjects = this.projects.slice();
 
 
+  /**
+   * Handles the click event for a project card.
+   * @param {number} index - The index of the project card in the list.
+   */
   clickedProject(index: number) {
     if (this.clickedMockup == false && this.isDektopOrTablet()) {
       this.onMouseOver(index);

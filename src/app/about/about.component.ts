@@ -1,11 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
-/**
- * The `AboutComponent` is responsible for displaying the "About Us" page.
- * It observes a specific DOM element and triggers a fade-in animation
- * when the element becomes visible in the viewport.
- */
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',

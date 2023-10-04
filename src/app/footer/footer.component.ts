@@ -1,10 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
-/**
- * The `FooterComponent` is responsible for displaying the footer of the application.
- * It observes a specific DOM element and handles the visibility of an arrow and a scroll note.
- */
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',

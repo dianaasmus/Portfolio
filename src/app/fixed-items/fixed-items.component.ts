@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 
-/**
- * The `FixedItemsComponent` is responsible for displaying fixed items in the UI.
- */
 @Component({
   selector: 'app-fixed-items',
   templateUrl: './fixed-items.component.html',
