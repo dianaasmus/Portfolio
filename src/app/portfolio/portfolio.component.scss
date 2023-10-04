@@ -65,6 +65,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        width: 60vw;
 
         button {
             font-size: 0.9rem;
@@ -125,7 +126,8 @@ a {
     transition: all ease-in-out 125ms;
 
     @media (max-width: 700px) {
-        height: 53vh;
+        position: relative;
+        height: unset;
         opacity: 1;
     }
 
@@ -168,7 +170,6 @@ a {
 
     @media (max-width: 700px) {
         position: relative;
-        top: 24vh;
     }
 }
 
@@ -177,15 +178,11 @@ a {
     gap: 30px;
     margin-top: 30px;
     width: 300px;
-    z-index: 6;
 
     @media (max-width: 700px) {
         position: relative;
-        top: 24vh;
         gap: 10px;
         width: 200px;
-        margin-top: 30px;
-
 
         a {
             margin: 0;
@@ -193,8 +190,17 @@ a {
     }
 }
 
+#join-btns,
+#escaping-earth-btns {
+    z-index: 6;
+}
+
+#simple-crm-btns {
+    opacity: 1;
+}
+
 .project {
-    height: 60vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +208,9 @@ a {
     margin-bottom: 50px;
 
     @media (max-width: 700px) {
-        height: 90vh;
+        height: 100vh;
+        gap: 15px;
+        margin-bottom: 0;
     }
 }
 
@@ -225,7 +233,8 @@ a {
     }
 }
 
-.mobile[alt="join-mobile"] {
+.mobile[alt="join-mobile"],
+.mobile[alt="simple-crm-mobile"] {
     position: absolute;
     max-width: 116px;
     width: 13vw;
@@ -249,7 +258,8 @@ a {
     }
 }
 
-.desktop[alt="join-desktop"] {
+.desktop[alt="join-desktop"],
+.desktop[alt="simple-crm-desktop"] {
     max-width: 570px;
     width: 70vw;
     transform: translateX(3vw);

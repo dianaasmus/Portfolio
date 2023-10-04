@@ -7,9 +7,10 @@
             <button (click)="filterByCode('Angular')">Angular</button>
         </div>
     </div>
-    <div class="project" *ngFor="let project of filteredProjects" (mouseover)="project.isHovered = true"
-        (mouseout)="project.isHovered = false">
-        <div class="project-context" [class.show-context]="project.isHovered">
+    <div class="project" *ngFor="let project of filteredProjects; let i = index" 
+    (mouseover)="onMouseOver(i)" 
+    (mouseout)="onMouseOut(i)">
+        <div id="{{ project.imgs }}" class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
@@ -22,7 +23,7 @@
                 [alt]="project.imgs + '-desktop'">
         </div>
 
-        <div class="project-context-btns">
+        <div id="{{ project.imgs }}-btns" class="project-context-btns">
             <a href="{{ project.website }}" target="_blank" class="project-links">Try</a>
             <a href="{{ project.github }}" target="_blank" class="project-links">Github</a>
         </div>

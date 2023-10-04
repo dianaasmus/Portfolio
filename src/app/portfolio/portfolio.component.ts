@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { ObserverService } from '../observer.service';
 
 /**
@@ -28,11 +28,11 @@ export class PortfolioComponent {
    */
   public isHovered: boolean = false;
 
-  private handleResize() {
-    this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
-  }
+  // private handleResize() {
+  //   this.updateIsHovered(); // Aktualisierung bei Änderungen der Fenstergröße
+  // }
 
-  
+
   /**
    * An array containing project information objects.
    */
@@ -56,16 +56,36 @@ export class PortfolioComponent {
       content: 'In Escaping Earth, you control a character as they explore a world full of challenges and obstacles. A dynamic and interactive game that is easy for players of all ages to enjoy.',
       code: 'HTML | CSS | JavaScript OOP',
       isHovered: false
+    },
+    {
+      name: 'Simple CRM',
+      imgs: 'simple-crm',
+      filter: 'Angular',
+      website: '',
+      github: '',
+      content: 'COMING SOON',
+      code: 'HTML | CSS | Firebase | Angular',
+      isHovered: true
     }
   ];
 
 
-  updateIsHovered() {
-    if (window.matchMedia('(min-width: 700px)').matches) {
-      this.isHovered = true;
-    } else {
-      this.isHovered = false;
+  onMouseOver(index: number) {
+    if (index !== 2 && this.isDektop()) {
+      this.filteredProjects[index].isHovered = true;
     }
+  }
+
+
+  onMouseOut(index: number) {
+    if (index !== 2 && this.isDektop()) {
+      this.filteredProjects[index].isHovered = false;
+    }
+  }
+
+
+  isDektop() {
+    return window.matchMedia('(min-width: 700px)').matches;
   }
 
 
@@ -97,10 +117,8 @@ export class PortfolioComponent {
    * @param {ObserverService} observerService - The service for observing DOM elements.
    */
   constructor(private observerService: ObserverService) {
-    this.updateIsHovered(); // Initialer Aufruf
-
     // Event-Listener für das Ändern der Fenstergröße
-    window.addEventListener('resize', this.handleResize.bind(this));
+    // window.addEventListener('resize', this.handleResize.bind(this));
   }
 
 
@@ -111,6 +129,17 @@ export class PortfolioComponent {
   ngAfterViewInit() {
     const elementToObserve = this.projectToObserve.nativeElement;
     this.observerService.observe(elementToObserve, this, 0.25);
+
+    this.showSimpleCRMPreview();
+  }
+
+
+  showSimpleCRMPreview() {
+    const simpleCRMLinks = document.getElementById('simple-crm');
+
+    if (simpleCRMLinks) {
+      simpleCRMLinks.style.marginTop = "10vh";
+    }
   }
 
 
