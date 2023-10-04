@@ -117,8 +117,11 @@ a {
     display: flex;
     flex-direction: column;
     color: white;
+    justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: inherit;
+    padding-bottom: 150px;
+    box-sizing: border-box;
     z-index: 3;
     width: 65vw;
     max-width: 600px;
@@ -130,6 +133,7 @@ a {
         position: relative;
         height: unset;
         opacity: 1;
+        padding-bottom: unset;
     }
 
     h1 {
@@ -229,7 +233,9 @@ a {
     }
 }
 
-#simple-crm-btns a {
+#simple-crm-btns a,
+#simple-crm-content, 
+#simple-crm-mockups {
     pointer-events: none;
 }
 

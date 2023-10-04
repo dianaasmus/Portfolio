@@ -9,14 +9,14 @@
     </div>
     <div id="{{ project.imgs }}" class="project" *ngFor="let project of filteredProjects; let i = index" 
     (mouseover)="onMouseOver(i)" 
-    (mouseout)="onMouseOut(i)">
+    (mouseout)="onMouseOut(i)" (click)="clickedProject(i)">
         <div id="{{ project.imgs }}-content" class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
             <p class="project-code">{{ project.code }}</p>
             <p>{{ project.content }}</p>
         </div>
 
-        <div class="project-mockups" [class.mockup-hover]="project.isHovered">
+        <div id="{{ project.imgs }}-mockups" class="project-mockups" [class.mockup-hover]="project.isHovered">
             <img class="mobile" [src]="'../../assets/img/' + project.imgs + '-mobile.png'"
                 [alt]="project.imgs + '-mobile'">
             <img class="desktop" [src]="'../../assets/img/' + project.imgs + '-desktop.png'"

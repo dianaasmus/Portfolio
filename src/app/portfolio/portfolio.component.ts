@@ -27,7 +27,9 @@ export class PortfolioComponent {
    * A flag indicating whether a project is hovered.
    */
   public isHovered: boolean = false;
-  
+
+  clickedMockup:boolean = false;
+
 
   /**
    * An array containing project information objects.
@@ -67,11 +69,28 @@ export class PortfolioComponent {
 
 
   /**
+  * An array containing filtered project information objects.
+  */
+  filteredProjects = this.projects.slice();
+
+
+  clickedProject(index: number) {
+    if (this.clickedMockup == false && this.isDektopOrTablet()) {
+      this.onMouseOver(index);
+      this.clickedMockup = true;
+    } else if (this.isDektopOrTablet()) {
+      this.onMouseOut(index);
+      this.clickedMockup = false;
+    }
+  }
+
+
+  /**
    * Handles the mouse over event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
   onMouseOver(index: number) {
-    if (index !== 2 && this.isDektop()) {
+    if (index !== 2 && this.isDektopOrTablet()) {
       this.filteredProjects[index].isHovered = true;
     }
   }
@@ -82,25 +101,19 @@ export class PortfolioComponent {
    * @param {number} index - The index of the project card in the list.
    */
   onMouseOut(index: number) {
-    if (index !== 2 && this.isDektop()) {
+    if (index !== 2 && this.isDektopOrTablet()) {
       this.filteredProjects[index].isHovered = false;
     }
   }
 
-  
+
   /**
    * Checks if the screen width is greater than or equal to 700px.
    * @returns {boolean} - True if the screen width is greater than or equal to 700px, false otherwise.
    */
-  isDektop() {
+  isDektopOrTablet() {
     return window.matchMedia('(min-width: 700px)').matches;
   }
-
-
-  /**
-   * An array containing filtered project information objects.
-   */
-  filteredProjects = this.projects.slice();
 
 
   /**
@@ -124,10 +137,7 @@ export class PortfolioComponent {
    * Constructor for the `PortfolioComponent` class.
    * @param {ObserverService} observerService - The service for observing DOM elements.
    */
-  constructor(private observerService: ObserverService) {
-    // Event-Listener für das Ändern der Fenstergröße
-    // window.addEventListener('resize', this.handleResize.bind(this));
-  }
+  constructor(private observerService: ObserverService) { }
 
 
   /**
