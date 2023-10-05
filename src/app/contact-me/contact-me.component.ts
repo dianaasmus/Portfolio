@@ -30,6 +30,23 @@ export class ContactMeComponent {
 
 
   /**
+   * Handle the event when the content of a textarea changes.
+   * @param {Event} event - The input event triggered by the textarea.
+   */
+  textareaContentChanged(event: Event) {
+    const textarea = event.target as HTMLTextAreaElement;
+    const messageField = this.messageField.nativeElement;
+    
+    messageField.style.maxHeight = textarea.value.trim() !== '' ? '130px' : '20px';
+    // if (textarea.value.trim() !== '') {
+    //   messageField.style.maxHeight = "130px";
+    // } else {
+    //   messageField.style.maxHeight = "20px";
+    // }
+  }
+
+
+  /**
    * Activates the fade-in animation when the container is in the viewport.
    */
   containerInViewport() {

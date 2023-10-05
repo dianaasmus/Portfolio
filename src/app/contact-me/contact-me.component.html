@@ -15,7 +15,7 @@
         <input type="email" id="email" name="email" autocomplete="on"  required #emailField>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" cols="30" rows="10" required #messageField></textarea>
+        <textarea id="message" name="message" cols="30" rows="10" (input)="textareaContentChanged($event)" required #messageField></textarea>
 
         <button type="submit" #sendBtn>Send Message :&rpar;</button>
     </div>
