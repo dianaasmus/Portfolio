@@ -25,7 +25,7 @@ export class ContactMeComponent {
    */
   ngAfterViewInit() {
     const elementToObserve = this.contactMe.nativeElement;
-    this.observerService.observe(elementToObserve, this, 0.5);
+    this.observerService.observe(elementToObserve, this, 0.2);
   }
 
 

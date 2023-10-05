@@ -36,7 +36,7 @@ export class FooterComponent {
    */
   ngAfterViewInit() {
     const elementToObserve = this.footerToObserve.nativeElement;
-    this.observerService.observe(elementToObserve, this, 0.5);
+    this.observerService.observe(elementToObserve, this, 0.2);
 
     this.scrollNote = document.querySelector('.scroll-note');
     this.scrollUp = document.querySelector('.arrow-up');
