@@ -44,6 +44,10 @@ header {
         @media (min-width: 1441px) {
             height: 50px;
         }
+
+        @media (max-width: 500px) {
+            height: 32px;
+        }
     }
 
     .menu-img {

@@ -16,7 +16,7 @@ export class SkillsComponent {
     { src: '../../assets/img/icons/javascript-icon.png', alt: 'JavaScript' },
     { src: '../../assets/img/icons/api-icon.png', alt: 'Rest API' },
     { src: '../../assets/img/icons/material-d-icon.png', alt: 'Material Design' },
-    { src: '../../assets/img/icons/git-icon.png', alt: 'GIT' },
+    { src: '../../assets/img/icons/git-icon.png', alt: 'Git' },
     { src: '../../assets/img/icons/scrum-icon.png', alt: 'Scrum' },
     { src: '../../assets/img/icons/angular-icon.png', alt: 'Angular' },
     { src: '../../assets/img/icons/typescript-icon.png', alt: 'TypeScript' },
