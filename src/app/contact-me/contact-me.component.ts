@@ -38,11 +38,6 @@ export class ContactMeComponent {
     const messageField = this.messageField.nativeElement;
     
     messageField.style.maxHeight = textarea.value.trim() !== '' ? '130px' : '20px';
-    // if (textarea.value.trim() !== '') {
-    //   messageField.style.maxHeight = "130px";
-    // } else {
-    //   messageField.style.maxHeight = "20px";
-    // }
   }
 
 
