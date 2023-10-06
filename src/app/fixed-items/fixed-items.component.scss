@@ -1,37 +1,55 @@
 .scroll {
     height: 100vh;
-    max-width: 1440px;
+    max-width: 1441px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%);
-    
+
     hr {
-        height: 6vh;
+        height: 50px;
         width: 0.5px;
         background-color: #dddddd;
         border: none;
         position: absolute;
         bottom: 39px;
-        right: 35px;
+        right: 58px;
+
+        @media (min-width: 1441px) {
+            height: 60px;
+            right: 65px;
+        }
+
+        @media (max-width: 1000px) {
+            right: 46px;
+        }
 
         @media (max-width: 500px) {
-            right: 6vw;
-            bottom: 2rem;
+            right: 30px;
         }
     }
 
     p {
         position: absolute;
-        right: 16px;
+        right: 40px;
         bottom: 100px;
         color: #dddddd;
         transform: rotate(90deg);
         margin-top: 0;
+        font-size: 16px;
+
+        @media (min-width: 1441px) {
+            font-size: 1.3rem;
+            bottom: 110px;
+        }
+
+        @media (max-width: 1000px) {
+            right: 30px;
+        }
 
         @media (max-width: 500px) {
-            right: 1vw;
+            right: 12px;
         }
     }
 }
@@ -59,11 +77,15 @@
     gap: 15px;
     position: absolute;
     bottom: 39px;
-    left: 30px;
+    left: 50px;
     flex-direction: column;
 
+    @media (max-width: 1000px) {
+        left: 30px;
+    }
+
     @media (max-width: 500px) {
-        left: 4vw;
+        left: 20px;
     }
 
     img {
@@ -74,6 +96,10 @@
 
         &:hover {
             filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
+        }
+
+        @media (min-width: 1441px) {
+            width: 30px;
         }
     }
 }
