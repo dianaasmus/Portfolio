@@ -1,5 +1,5 @@
 .portfolio-container {
-    width: 85vw;
+    width: 80vw;
     max-width: 900px;
     box-sizing: border-box;
     padding: 0 115px;
@@ -8,10 +8,10 @@
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    gap: 13vh;
+    margin-bottom: 15vh;
 
-    @media (max-width: 500px) {
-        gap: 0;
+    @media (max-width: 700px) {
+        gap: 100px;
     }
 }
 
@@ -70,7 +70,7 @@ button {
     align-items: center;
     cursor: pointer;
     margin: 20px 0;
-    box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
     transition: all 125ms ease-in-out;
 
     @media (max-width: 500px) {
@@ -90,17 +90,16 @@ a {
 }
 
 .project {
-    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-top: -100px;
 
     @media (max-width: 700px) {
-        height: 100vh;
         gap: 15px;
         margin-bottom: 0;
+        margin-top: 0;
     }
 }
 
@@ -110,15 +109,14 @@ a {
 }
 
 .project-context {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     color: white;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
-    height: inherit;
-    padding-bottom: 150px;
-    box-sizing: border-box;
     z-index: 3;
     width: 65vw;
     max-width: 600px;
@@ -131,6 +129,9 @@ a {
         height: unset;
         opacity: 1;
         padding-bottom: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
     }
 
     h1 {
@@ -246,7 +247,7 @@ a {
     align-items: center;
     cursor: pointer;
     margin: 20px 0;
-    box-shadow: -3px 3px 16px 2px rgba(0, 0, 0, 0.91);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.6);
 
     &:hover {
         border: 1px solid #5338e4;

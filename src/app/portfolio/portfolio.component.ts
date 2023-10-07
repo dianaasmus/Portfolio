@@ -80,10 +80,8 @@ export class PortfolioComponent {
   clickedProject(index: number) {
     if (this.clickedMockup == false && this.isDektopOrTablet()) {
       this.onMouseOver(index);
-      this.clickedMockup = true;
     } else if (this.isDektopOrTablet()) {
       this.onMouseOut(index);
-      this.clickedMockup = false;
     }
   }
 
@@ -95,6 +93,7 @@ export class PortfolioComponent {
   onMouseOver(index: number) {
     if (index !== 2 && this.isDektopOrTablet()) {
       this.filteredProjects[index].isHovered = true;
+      this.clickedMockup = true;
     }
   }
 
@@ -106,6 +105,7 @@ export class PortfolioComponent {
   onMouseOut(index: number) {
     if (index !== 2 && this.isDektopOrTablet()) {
       this.filteredProjects[index].isHovered = false;
+      this.clickedMockup = false;
     }
   }
 
