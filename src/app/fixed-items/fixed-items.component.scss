@@ -57,7 +57,7 @@
 .arrow-up {
     filter: invert(70%) sepia(2%) saturate(10%) hue-rotate(314deg) brightness(91%) contrast(87%);
     position: absolute;
-    right: 19px;
+    right: 50px;
     bottom: 2rem;
     cursor: pointer;
     display: block;
@@ -65,6 +65,20 @@
 
     &:hover {
         filter: invert(27%) sepia(98%) saturate(5906%) hue-rotate(249deg) brightness(92%) contrast(95%);
+    }
+
+    @media (max-width: 1000px) {
+        right: 30px;
+    }
+
+    @media (max-width: 500px) {
+        right: 20px;
+    }
+
+    img {
+        @media (max-width: 500px) {
+            height: 30px;
+        }
     }
 }
 
