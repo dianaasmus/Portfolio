@@ -36,9 +36,9 @@ export class PortfolioComponent {
   projects = [
     {
       name: 'Join',
-      imgs: 'join',
+      imgName: 'join',
       filter: 'JavaScript',
-      website: 'https://join.dianaasmus.com/html/summary.html',
+      website: 'https://join.dianaasmus.com/index.html',
       gitHub: 'https://github.com/dianaasmus/Join-new.git',
       content: 'Join is a powerful Kanban project management tool that helps teams efficiently organize and manage their projects. With a user-friendly interface and a variety of features, Join provides an intuitive platform for collaboration and task progress.',
       code: 'HTML | CSS | JavaScript | Group project',
@@ -46,7 +46,7 @@ export class PortfolioComponent {
     },
     {
       name: 'Escaping Earth',
-      imgs: 'escaping-earth',
+      imgName: 'escaping-earth',
       filter: 'JavaScript',
       website: 'https://escaping-earth.dianaasmus.com/index.html',
       gitHub: 'https://github.com/dianaasmus/Escaping-Earth.git',
@@ -56,7 +56,7 @@ export class PortfolioComponent {
     },
     {
       name: 'Simple CRM',
-      imgs: 'simple-crm',
+      imgName: 'simple-crm',
       filter: 'Angular',
       website: '',
       gitHub: '',
@@ -77,11 +77,11 @@ export class PortfolioComponent {
    * Handles the click event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  clickedProject(index: number) {
+  clickedProject(index: number, isHoveredProject: string) {
     if (this.clickedMockup == false && this.isDektopOrTablet()) {
-      this.onMouseOver(index);
+      this.onMouseOver(index, isHoveredProject);
     } else if (this.isDektopOrTablet()) {
-      this.onMouseOut(index);
+      this.onMouseOut(index, isHoveredProject);
     }
   }
 
@@ -90,9 +90,10 @@ export class PortfolioComponent {
    * Handles the mouse over event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  onMouseOver(index: number) {
-    if (index !== 2 && this.isDektopOrTablet()) {
-      this.filteredProjects[index].isHovered = true;
+  onMouseOver(i: number, isHoveredProject: string) {
+    if (isHoveredProject !== 'simple-crm' && this.isDektopOrTablet()) {
+      
+      this.filteredProjects[i].isHovered = true;
       this.clickedMockup = true;
     }
   }
@@ -102,9 +103,10 @@ export class PortfolioComponent {
    * Handles the mouse out event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  onMouseOut(index: number) {
-    if (index !== 2 && this.isDektopOrTablet()) {
-      this.filteredProjects[index].isHovered = false;
+  onMouseOut(i: number, isHoveredProject: string) {
+    if (isHoveredProject !== 'simple-crm' && this.isDektopOrTablet()) {
+
+      this.filteredProjects[i].isHovered = false;
       this.clickedMockup = false;
     }
   }

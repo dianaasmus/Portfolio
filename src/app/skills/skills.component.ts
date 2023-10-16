@@ -21,7 +21,7 @@ export class SkillsComponent {
     { src: '../../assets/img/icons/angular-icon.png', alt: 'Angular' },
     { src: '../../assets/img/icons/typescript-icon.png', alt: 'TypeScript' },
     { src: '../../assets/img/icons/firebase-icon.png', alt: 'Firebase' },
-    { src: '../../assets/img/icons/wordpress-icon.png', alt: 'WordPress' },
+    { src: '../../assets/img/icons/wordpress-icon.png', alt: 'WordPress' }
   ];
 
   
