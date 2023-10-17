@@ -151,7 +151,7 @@ export class PortfolioComponent {
    */
   ngAfterViewInit() {
     const elementToObserve = this.projectToObserve.nativeElement;
-    this.observerService.observe(elementToObserve, this, 0.1);
+    this.observerService.observe(elementToObserve, this, 0.2);
   }
 
 

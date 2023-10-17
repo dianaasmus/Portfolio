@@ -1,5 +1,4 @@
 .contact-container {
-    height: 100vh;
     color: #ddd;
     max-width: 900px;
     width: 80vw;
@@ -9,7 +8,7 @@
     justify-content: center;
     z-index: 3;
     position: relative;
-    padding: 0 115px;
+    padding: 15vh 115px;
     box-sizing: border-box;
     border-bottom: 1px solid #4d4d4d;
     opacity: 0;
@@ -19,7 +18,7 @@
         box-sizing: border-box;
         width: 70vw;
         flex-direction: column;
-        padding: 15vh 0 100px 0;
+        padding: 15vh 0 15vh 0;
         gap: 50px;
     }
 

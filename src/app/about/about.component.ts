@@ -32,7 +32,7 @@ export class AboutComponent {
    */
   ngAfterViewInit() {
     const elementToObserve = this.aboutMeToObserve.nativeElement;
-    this.observerService.observe(elementToObserve, this, 0.2);
+    this.observerService.observe(elementToObserve, this, 0.35);
   }
 
 
