@@ -21,6 +21,10 @@
         gap: 20px;
     }
 
+    @media (min-width: 1540px) {
+        padding: 0px 10vw;
+    }
+
     div {
 
         h1 {
@@ -43,7 +47,7 @@
             max-width: 600px;
             width: 100%;
 
-            @media (min-height: 900px) or (min-width: 1440px) {
+            @media (min-height: 900px) or (min-width: 1540px) {
                 font-size: 1.3rem;
             }
         }
