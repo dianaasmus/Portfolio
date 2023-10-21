@@ -11,6 +11,7 @@
     box-sizing: border-box;
     gap: 40px;
     opacity: 0;
+    z-index: -1;
 
     @media (max-width: 850px) {
         justify-content: center;

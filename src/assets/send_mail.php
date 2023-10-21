@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$recipient = 'asmus.diana@icloud.com'; # Bitte hier deine E-Mail angeben
+$recipient = 'mail@dianaasmus.com'; # Bitte hier deine E-Mail angeben
 
 ########### CONFIG END ###########
 

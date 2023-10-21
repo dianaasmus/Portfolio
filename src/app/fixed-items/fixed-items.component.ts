@@ -16,6 +16,6 @@ export class FixedItemsComponent {
    * Opens the default email client with a pre-filled email address.
    */
   openMail() {
-    window.location.href = 'mailto:asmus.diana@icloud.com';
+    window.location.href = 'mailto:mail@dianaasmus.com';
   }
 }
