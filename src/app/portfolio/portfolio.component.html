@@ -12,9 +12,11 @@
 
     </div>
 
-    <div id="{{ project.imgName }}" class="project" *ngFor="let project of filteredProjects; let i = index" 
-    (mouseover)="onMouseOver(i, project.imgName)" 
-    (mouseout)="onMouseOut(i, project.imgName)" (click)="clickedProject(i, project.imgName)">
+    <div id="{{ project.imgName }}" class="project" 
+        *ngFor="let project of filteredProjects; let i = index" 
+        (mouseover)="onMouseOver(i, project.imgName)" 
+        (mouseout)="onMouseOut(i, project.imgName)" 
+        (click)="clickedProject(i, project.imgName)">
 
         <div id="{{ project.imgName }}-content" class="project-context" [class.show-context]="project.isHovered">
             <h1>{{ project.name }}</h1>
