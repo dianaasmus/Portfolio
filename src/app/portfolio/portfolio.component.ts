@@ -27,7 +27,7 @@ export class PortfolioComponent {
   /**
    * A flag indicating whether a mockup is clicked.
    */
-  clickedMockup:boolean = false;
+  clickedMockup: boolean = false;
 
 
   /**
@@ -58,11 +58,11 @@ export class PortfolioComponent {
       name: 'Simple CRM',
       imgName: 'simple-crm',
       filter: 'Angular',
-      website: '',
-      gitHub: '',
-      content: 'COMING SOON',
+      website: 'https://crm.dianaasmus.com',
+      gitHub: 'https://github.com/dianaasmus/CRM.git',
+      content: "The ,Simple CRM' provides businesses with a user-friendly platform to effortlessly create and manage customers while gaining detailed insights into their business performance. It enables a clear statistical function to capture relevant metrics and maintains an overview of each transaction through the integration of purchase management.",
       code: 'HTML | CSS | Firebase | Angular',
-      isHovered: true
+      isHovered: false
     }
   ];
 
@@ -77,11 +77,11 @@ export class PortfolioComponent {
    * Handles the click event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  clickedProject(index: number, isHoveredProject: string) {
+  clickedProject(index: number) {
     if (this.clickedMockup == false && this.isDektopOrTablet()) {
-      this.onMouseOver(index, isHoveredProject);
+      this.onMouseOver(index);
     } else if (this.isDektopOrTablet()) {
-      this.onMouseOut(index, isHoveredProject);
+      this.onMouseOut(index);
     }
   }
 
@@ -90,12 +90,9 @@ export class PortfolioComponent {
    * Handles the mouse over event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  onMouseOver(i: number, isHoveredProject: string) {
-    if (isHoveredProject !== 'simple-crm' && this.isDektopOrTablet()) {
-      
-      this.filteredProjects[i].isHovered = true;
-      this.clickedMockup = true;
-    }
+  onMouseOver(i: number) {
+    this.filteredProjects[i].isHovered = true;
+    this.clickedMockup = true;
   }
 
 
@@ -103,12 +100,9 @@ export class PortfolioComponent {
    * Handles the mouse out event for a project card.
    * @param {number} index - The index of the project card in the list.
    */
-  onMouseOut(i: number, isHoveredProject: string) {
-    if (isHoveredProject !== 'simple-crm' && this.isDektopOrTablet()) {
-
-      this.filteredProjects[i].isHovered = false;
-      this.clickedMockup = false;
-    }
+  onMouseOut(i: number) {
+    this.filteredProjects[i].isHovered = false;
+    this.clickedMockup = false;
   }
 
 
